@@ -1,0 +1,34 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.footer{
+    &__top{
+        background-color: #f4f4f4;
+    }
+    &__bottom{
+        background:$clr-secondary;
+        padding-block: em(20);
+    }
+    &__link{
+        font-size: rem(16);
+        line-height: 2.5;
+    }
+    &__item{
+        span{
+            color:$clr-primary !important;
+        }
+    }
+}
+
+
+.socials{
+    &__list{
+        display: flex;
+        align-items: center;
+        gap:em(32);
+    }
+}

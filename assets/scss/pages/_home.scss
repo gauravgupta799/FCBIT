@@ -1,0 +1,350 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+//?--------- Hero Styles Start ---------
+.hero{
+    &--home{
+        background: $clr-primary;
+    }
+    &__bgMobile{
+        display: block;
+        @include breakpoint-lg{
+            display: none;
+        }
+    }
+    &__container{
+        @include breakpoint-lg{
+            background-image: url("../../../assets/images/home-hero-mask.webp");
+            background-position: right 100%;
+            background-repeat: no-repeat;
+        }
+    }
+    &__btnWrapper{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:1rem;
+    }
+}
+//?--------- Hero Styles End ---------
+
+
+//?--------- Certification Styles Start ---------
+.certification{
+    &__ratings{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:rem(14);
+        @include breakpoint-sm{
+            gap:rem(32);
+        }
+    }
+}
+//?--------- Certification Styles End ---------
+
+
+//?--------- Process Styles Start ---------
+.process{
+    background-image: url("../../../assets/images/renewables_construction.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+
+    &__card{
+        padding: em(40) em(6);
+        background-color: $clr-white;
+        margin-top: rem(24);
+        @include breakpoint-md{
+            padding: em(40) em(10);
+        }
+        @include breakpoint-lg{
+            padding: em(60) em(20);
+        }
+        @include breakpoint-xl{
+            padding:em(80) em(100) em(80) em(35);
+        }
+    }
+    &__stepDesc{
+        line-height: 1.75;
+        margin-top: 0;
+    }
+    &__checkedWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top:rem(16);
+        row-gap: rem(105);
+        position: relative;
+        z-index: 1;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            width: 4px;
+            background: $clr-secondary;
+            z-index: -1;
+            height: calc(100% - 74px);
+            opacity: 0.8;
+        }
+    }
+    &__checked{
+        // padding-block: em(18);
+        padding:em(14);
+        @include flex-center;
+        @include border-radius(4px);
+        background-color: $clr-secondary;
+        span{
+            display: flex;
+        }
+        @include breakpoint-md{
+            // padding-block: em(24);
+            padding:em(20);
+        }
+    }
+}
+//?--------- Process Styles End ---------
+
+
+//?--------- Experience Styles End ---------
+// .experience{
+
+// }
+
+//?--------- PExperience Styles Start ---------
+
+
+//?--------- Projects Styles Start ---------
+.projects{
+    padding-block: em(175) em(200);
+    background-color: $clr-primary;
+    &__subtitle{
+        font-family: $ff-objsRegular;
+        font-size: rem(24);
+        line-height: 1.5;
+    }
+    &__chevrons{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap:1rem;
+    }
+}
+
+.chevron{
+    width: 41px;
+    height: 41px;
+    @include flex-center;
+    @include border-radius(50%);
+    background-color: $clr-white;
+    @include transition(background-color, 0.3s, ease-in-out);
+    &--prev{
+        transform:rotate(180deg);
+    }
+    &:hover{
+        background-color: $clr-secondary;
+        cursor: pointer;
+        svg{
+            path{
+                fill:$clr-white;
+            }
+        }
+    }
+}
+//?--------- Projects Styles End ---------
+
+
+//?--------- Creation Styles Start ---------
+.creation{
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__figure{
+        img{
+            padding-bottom: em(20);
+        }
+    }
+    &__figcaption{
+        font-size: rem(24);
+        line-height: 1.5;
+        color:$clr-dark;
+        font-family: $ff-objsRegular;
+        border-top: 2px solid $clr-grey-light-2;
+        padding-top:em(20);
+    }
+}
+//?--------- Creation Styles End ---------
+
+
+//?--------- Customers Styles Start ---------
+.customer{
+    padding-block: em(100) em(160);
+    padding-right: 0;
+    background-color: $clr-white-90;
+
+    &__card{
+        padding: em(25);
+        box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.08);
+        background-color: $clr-white;
+        @include breakpoint-sm{
+            padding: em(30) em(50) em(30) em(35);
+        }
+        @include breakpoint-md{
+            padding: em(35) em(70) em(35) em(45);
+        }
+        @include breakpoint-lg{
+            // padding: em(45) em(48) em(35) em(65);
+            padding: em(40) em(50);
+        }
+
+        p{
+            line-height: 1.8;
+        }
+    }
+    &__figure{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:rem(16);
+        @include breakpoint-lg{
+            gap:rem(32);
+        }
+    }
+    &__thumb{
+        width: rem(100);
+        height: rem(100);
+        @include border-radius(50%);
+        img{
+            object-fit: contain;
+        }
+    }
+}
+//?--------- Customers Styles End ---------
+
+
+//?--------- FAQs Styles Start ---------
+.faq{
+    &__wrapper{
+        @include breakpoint-sm{
+            padding-inline:1rem;
+        }
+        @include breakpoint-md{
+            padding-inline:3rem;
+        }
+        @include breakpoint-lg{
+            padding-inline:7rem;
+        }
+        @include breakpoint-xl{
+            padding-inline:11rem;
+        }
+        @include breakpoint-xxl{
+            padding-inline:15rem;
+        }    
+    }
+    &__summary{
+        list-style: none;
+        @include flex-center-horizontal;
+        gap:rem(48);
+        @include transition(all, 0.4s, ease);
+        cursor: pointer;
+    
+        @include breakpoint-sm{
+            justify-content: space-between;
+        }
+        &::-webkit-details-marker{
+            display: none;
+        }
+        &::after{
+            content: "\002B";
+            font-size: rem(28);
+        }
+        &:hover{
+            h4, &::after{
+                color:$clr-secondary;
+            }
+        }
+    }
+
+    &__details{
+        border-bottom: 1px solid  #9d9d9d;
+        padding: em(18) em(16);
+        &:first-child{
+            border-top:1px solid #9d9d9d;
+        }
+        &:hover{
+            background: #f4f4f4;
+        }
+    }
+}
+
+.faq__details[open] .faq__summary > h4{
+    margin-bottom: .5em;
+    color:$clr-secondary;
+}
+
+.faq__details[open] .faq__summary:after{
+  content: "\00D7";
+  font-size: rem(28);
+  color:$clr-secondary;
+}
+
+.faq__details[open] p{
+  line-height: 1.8;
+}
+//?--------- FAQs Styles End ---------
+
+
+//?--------- Cta Styles Start ---------
+.cta{
+    padding-top: em(100);
+    background-color: $clr-primary;
+    position: relative;
+    z-index: 1;
+    &__ratings{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:rem(24);
+      @include breakpoint-lg{
+        gap:rem(64);
+      }
+    }
+    &__figure{
+        margin-bottom: rem(-50);
+        @include breakpoint-md{
+            margin-bottom: rem(-70);
+        }
+        @include breakpoint-lg{
+            margin-bottom: rem(-80);
+        }
+        img{
+            object-fit: contain;
+        }
+    }
+    &::before{
+        content:"";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $clr-secondary;
+        width: rem(200);
+        height: rem(200);
+        z-index: -1;
+        @include breakpoint-md{
+            width: rem(390);
+            height: rem(250);
+        }
+        @include breakpoint-lg{
+            width: rem(490);
+            height: rem(300);
+        }
+            
+    }
+}
+//?--------- Cta Styles End ---------

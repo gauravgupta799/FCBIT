@@ -1,0 +1,77 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+// .swiper-button-prev,
+// .swiper-button-next{
+//     position: static !important;
+//     margin: 0px !important;
+//     z-index: 0 !important;
+// }
+.swiper-slide{
+    // width: 100% !important;
+    // margin-right: 0 !important;
+    // margin-left: -6px !important;
+}
+// .swiper-slide p{
+//     font-size: rem(28);
+//     font-weight: normal;
+//     line-height: 1.5;
+//     color: $clr-white;
+
+//     @include breakpoint-sm{
+//         font-size: rem(32);
+//     }
+//     @include breakpoint-md{
+//         font-size: rem(36);
+//     }
+//     @include breakpoint-lg{
+//         font-size: rem(40);
+//     }
+// }
+
+// .chevronIcons{
+//     @include flex-center-vertical;
+//     justify-content: flex-end;
+//     gap: 1.5rem;
+//     height: 100%;
+//     @include breakpoint-lg{
+//         display: flex;
+//         align-items: flex-end;
+//         gap: 3rem;
+//         margin-top: -20px;
+//     }
+//     &__wrapper{
+//         @include flex-center;
+//         width: rem(52);
+//         height: rem(52);
+//         border:1px solid $clr-grey;
+//         @include border-radius(12px);
+
+//         @include breakpoint-sm{
+//             width: rem(56);
+//             height: rem(56);
+//         }
+//         @include breakpoint-md{
+//             width: rem(60);
+//             height: rem(60);
+//         }
+//         @include breakpoint-lg{
+//             width: rem(64);
+//             height: rem(64);
+//         }
+
+//         &:hover{
+//             cursor: pointer;
+//             background-color: $clr-secondary;
+//             border-color: $clr-secondary;
+
+//             svg  path{
+//                 stroke :$clr-primary;
+//                 fill:$clr-primary;
+//             }
+//         }
+//     }
+// }

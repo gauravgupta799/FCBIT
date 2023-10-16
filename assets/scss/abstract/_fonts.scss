@@ -1,0 +1,39 @@
+// --------- ObjectSans-Black -------------
+@font-face{
+    font-family:"ObjectSans-Black";
+    src:url("../../../assets/fonts/ObjectSans/ObjectSans-Heavy.eot");
+    src:url("../../../assets/fonts/ObjectSans/ObjectSans-Heavy.woff2") format('woff2'),
+    url("../../../assets/fonts/ObjectSans/ObjectSans-Heavy.woff") format('woff'),
+    url("../../../assets/fonts/ObjectSans/ObjectSans-Heavy.ttf") format('truetype'),
+    url("../../../assets/fonts/ObjectSans/ObjectSans-Heavy.svg") format('svg');
+    // font-weight:900;
+}
+
+// --------- ObjectSans Regular/Normal -------------
+@font-face{
+    font-family:"ObjectSans";
+    src:url("../../../assets/fonts/ObjectSans/ObjectSans-Regular.eot");
+    src:url("../../../assets/fonts/ObjectSans/ObjectSans-Regular.woff2") format('woff2'),
+    url("../../../assets/fonts/ObjectSans/ObjectSans-Regular.woff") format('woff'),
+    url("../../../assets/fonts/ObjectSans/ObjectSans-Regular.ttf") format('truetype'),
+    url("../../../assets/fonts/ObjectSans/ObjectSans-Regular.svg") format('svg');
+    // font-weight:400 !important;
+}
+
+// --------- Roboto Regular/Normal -------------
+@font-face{
+    font-family:"Roboto";
+    src:url("../../../assets/fonts/Roboto/Roboto-Regular.eot");
+    src:url("../../../assets/fonts/Roboto/Roboto-Regular.woff2") format('woff2'),
+    url("../../../assets/fonts/Roboto/Roboto-Regular.woff") format('woff'),
+    url("../../../assets/fonts/Roboto/Roboto-Regular.ttf") format('truetype'),
+    url("../../../assets/fonts/Roboto/Roboto-Regular.svg") format('svg');
+    // font-weight:400;
+}
+
+
+
+$ff-regular:"Roboto", sans-serif;
+$ff-secondary:"ObjectSans-Black", sans-serif;
+
+$ff-objsRegular:"ObjectSans", sans-serif;

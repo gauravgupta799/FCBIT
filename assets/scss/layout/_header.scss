@@ -1,0 +1,158 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding-block:em(16);
+    @include transition(all, 0.4s, ease-out);
+    z-index: 5;
+    &.sticky{
+        background-color: $clr-primary;
+        padding-block:em(8);
+    }
+    &__wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__navbar{
+        width: 100%;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        gap:2rem;
+        @include breakpoint-lg{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap:3rem;
+            opacity: 1;
+            visibility: visible;
+        }
+        @include breakpoint-xl{
+            gap:14rem;
+        }
+    }
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:rem(16);
+        @include breakpoint-lg{
+            gap:rem(32);
+        }
+        @include breakpoint-xl{
+            gap:rem(48);
+        }
+    }
+    &__navLink{
+        color:$clr-white;
+        font-size: rem(18);
+        &:hover{
+            color:$clr-secondary;
+        }
+    }
+    &__btnWrapper{
+        &--mobile{
+            text-align: center;
+            margin-top: 2rem;
+        }
+    }
+
+    &__mobile{
+        position: fixed;
+        top: 0;
+        z-index: 99;
+        // width: 100%;
+        max-width: 80%;
+        height: 100vh;
+        padding-block:em(16);
+        background: $clr-primary;
+        color: $clr-white;
+        opacity: 0;
+        visibility: hidden;
+        right: -100%;
+        @include transition(right, 0.5s, ease-out);
+        &.open{
+            overflow: hidden;
+            opacity: 1;
+            visibility: visible;
+            @include transition(right, 0.5s, ease-out);
+            right: 0;
+        }
+        &-list{
+            @include flex-center-vertical;
+            flex-direction: column;
+            gap:rem(40);
+            margin-top:rem(48);
+            @include breakpoint-md{
+                align-items: flex-start;
+            }
+        }
+        &-link{
+            color: $clr-white;
+            font-size: rem(20);
+        }
+    }
+    &__logo{
+        @include flex-center;
+        img{
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (max-width:36em){
+    .header__logo{
+        img{
+            width: 138px;
+            height: 33px;
+        }
+    }
+}
+
+.hamburger{
+    width: rem(40);
+    display: block;
+    cursor: pointer;
+    @include breakpoint-lg{
+        display: none;
+    }
+    .line{
+        height: 2px;
+        background: $clr-white;
+        width: 100%;
+        margin-bottom: 6px;
+        &--2{
+            width: 90%;
+        }
+        &--3{
+            margin-bottom: 0px;
+            width: 75%;
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    // background-color: $clr-dark;
+    background: rgba(0,0,0,0.6);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    z-index: 1;
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+

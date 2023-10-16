@@ -1,0 +1,127 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.form{
+    &__group{
+        margin-bottom: rem(16);
+
+        &--footer{
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__control{
+        width: 100%;
+        background: $clr-white-90;
+        border:none;
+        outline:2px solid $clr-dark;
+        padding: em(12) em(24);
+        color:$clr-primary;
+        font-size: rem(16);
+        line-height: 2.5;
+        font-family: $ff-regular;
+        caret-color: $clr-secondary;
+        @include border-radius(4px);
+        &:focus{
+            outline-color: $clr-secondary;
+        }
+        &--footer{
+            outline: none;
+            border:1px solid #ccc;
+            border-top-right-radius:0px;
+            border-bottom-right-radius:0px;
+            background-color: $clr-white;
+        }
+    }
+}
+
+button[type="submit"]{
+    padding: em(16) em(32);
+}
+
+
+
+// .form-label{
+//     color: $clr-white-15;
+//     font-family: $ff-light;
+//     font-size: rem(16);
+// }
+
+// .form-check-label{
+//     color: $clr-white-100;
+//     text-transform: capitalize;
+// }
+
+// .form-group:nth-child(1):focus-within label,
+// .form-group:nth-child(3):focus-within label{
+//     color: $clr-secondary;
+// }
+
+// .form-group-email:focus-within label,
+// .form-group-phone:focus-within label{
+//     color: $clr-secondary;
+// }
+
+// .form-group .form-check-input {
+//     padding: 0;
+//     height: initial;
+//     width: initial;
+//     margin-bottom: 0;
+//     display: none;
+//     cursor: pointer;
+// }
+  
+// .form-group .form-check-label{
+//     position: relative;
+//     cursor: pointer;
+// }
+  
+// .form-group .form-check-label::before {
+//     content:'';
+//     background-color: transparent;
+//     border: 1px solid $clr-grey-10;
+//     box-shadow: 0 1px 2px $clr-boxShadow, inset 0px -15px 10px -12px $clr-boxShadow;
+//     padding: em(11);
+//     display: inline-block;
+//     position: relative;
+//     vertical-align: middle;
+//     cursor: pointer;
+//     margin-right: rem(12);
+// }
+// .form-group .form-check-input:checked + .form-check-label::before{
+//     border-color: $clr-secondary;
+// }
+  
+// .form-group .form-check-input:checked + .form-check-label::after {
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     top: 8px;
+//     left: 8px;
+//     width:rem(6);
+//     height: rem(12);
+//     border: 1px solid $clr-secondary;
+//     border-width: 0 1px 1px 0;
+//     transform: rotate(45deg);
+//     @include breakpoint-lg{
+//         top: 8px;
+//         left: 9px;
+//         height: rem(16);
+//     }
+// }
+
+// #submit{
+//     font-size: rem(18);
+//     @include breakpoint-md{
+//         font-size: rem(20);
+//     }
+// }
+
+// #submit:disabled{
+//     cursor: not-allowed;
+//     opacity: 0.6;
+// }
