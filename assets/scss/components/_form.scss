@@ -9,20 +9,21 @@
     &__group{
         margin-bottom: rem(16);
         &--footer{
-            @include flex-center-vertical;
+            display: flex;
+            background: $clr-white;
+            @include border-radius(9px);
         }
         &--contact{
             outline:2px solid $clr-border;
             @include flex-center-vertical;
             padding-left: em(20);
-            background: $clr-white-90;
         }
     }
     &__control{
         width: 100%;
         background: $clr-white-90;
         border:none;
-        outline:2px solid $clr-dark;
+        outline:2px solid transparent;
         padding: em(12) em(24);
         color:$clr-primary;
         font-size: rem(16);
@@ -34,8 +35,7 @@
             outline-color: $clr-secondary;
         }
         &--footer{
-            outline: none;
-            border:1px solid #ccc;
+            // outline: none;
             border-top-right-radius:0px;
             border-bottom-right-radius:0px;
             background-color: $clr-white;

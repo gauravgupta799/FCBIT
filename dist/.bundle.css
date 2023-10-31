@@ -11248,20 +11248,20 @@ p, ul, ol, body {
 }
 .form__group--footer {
   display: flex;
-  align-items: center;
+  background: #ffffff;
+  border-radius: 9px;
 }
 .form__group--contact {
   outline: 2px solid #636363;
   display: flex;
   align-items: center;
   padding-left: 1.25em;
-  background: #f4f4f4;
 }
 .form__control {
   width: 100%;
   background: #f4f4f4;
   border: none;
-  outline: 2px solid #000;
+  outline: 2px solid transparent;
   padding: 0.75em 1.5em;
   color: #161616;
   font-size: 1rem;
@@ -11274,8 +11274,6 @@ p, ul, ol, body {
   outline-color: #d5b276;
 }
 .form__control--footer {
-  outline: none;
-  border: 1px solid #ccc;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   background-color: #ffffff;
