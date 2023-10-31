@@ -11792,6 +11792,51 @@ button[type=submit] {
   }
 }
 
+.blogs-filter__group {
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.blogs-filter__group select {
+  background: transparent !important;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-family: "ObjectSans", sans-serif;
+  border-bottom: 1.4px solid rgba(0, 0, 0, 0.6);
+  padding-block: 0.625em;
+}
+
+.blog-search {
+  border: none;
+  outline: none;
+  border-bottom: 1.4px solid rgba(0, 0, 0, 0.6);
+  padding-block: 1.875em;
+  width: 100%;
+}
+
+.blogs__figcaption {
+  width: 70%;
+  max-width: 100%;
+}
+.blogs__figcaption p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: "ObjectSans", sans-serif;
+}
+
+.datetime {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #161616;
+}
+
+.stay {
+  padding-block: 9.375em;
+  background-color: #161616;
+}
+
 .contact-us__form .form__control {
   outline: none;
   border: none;
