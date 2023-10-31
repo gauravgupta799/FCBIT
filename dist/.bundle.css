@@ -11389,9 +11389,6 @@ button[type=submit] {
   bottom: -15px;
   height: 3px;
 }
-.header__mobile-link:hover {
-  letter-spacing: 0.05em;
-}
 
 .header__mobile-link.active {
   color: #d5b276;
