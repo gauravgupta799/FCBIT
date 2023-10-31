@@ -7,9 +7,11 @@
 
 //?--------- Hero Styles Start ---------
 .hero{
-    &--home{
-        background: $clr-primary;
-    }
+    background: $clr-primary;
+
+    // &--home{
+    //     background: $clr-primary;
+    // }
     &__bgMobile{
         display: block;
         @include breakpoint-lg{
@@ -108,14 +110,6 @@
     }
 }
 //?--------- Process Styles End ---------
-
-
-//?--------- Experience Styles End ---------
-// .experience{
-
-// }
-
-//?--------- PExperience Styles Start ---------
 
 
 //?--------- Projects Styles Start ---------

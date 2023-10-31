@@ -86,20 +86,20 @@ body {
     list-style: none;
   }
   
-  a {
-    text-decoration: none;
-    color:$clr-primary;
-  }
+a {
+  text-decoration: none;
+  color:$clr-primary;
+}
 
-  address{
-    font-style:normal;
-    font-size:100%;
-    color:$clr-primary !important;
-  }
-  small{
-    font-size: rem(16);
-    line-height: 1.75;
-  }
+address{
+  font-style:normal;
+  font-size:100%;
+  color:$clr-primary;
+}
+small{
+  font-size: rem(16);
+  line-height: 1.75;
+}
 
 p + p, h1 + p, h2 + p, h3 + p, h4 + p,  h5 + p, h6 + p{
     margin-top:1rem;
@@ -126,6 +126,11 @@ button{
   font-family:$ff-regular;
 }
 
+label{
+  color:$clr-primary;
+  font-size: rem(16);
+  font-family: $ff-regular;
+}
 
 ::placeholder{
   font-size: rem(16) !important;
