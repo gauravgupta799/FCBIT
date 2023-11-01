@@ -1,0 +1,182 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.customer-experience {
+
+    &__figure{
+        display: flex;
+        align-items: center;
+        gap:rem(24);
+        img{
+            width: rem(80);
+            height: rem(70);
+        }
+    }
+    &__figcaption{
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: 1.75;
+    }
+    &__list-item{
+        display: flex;
+        align-items: center;
+        gap:rem(20);
+    }
+}
+
+.why{
+    &__checked-box{
+        width: rem(34);
+        height: rem(34);
+        background-color: $clr-secondary;
+        @include border-radius(50%);
+        @include flex-center;
+    }
+}
+
+.what-get{
+    background: rgba(0,0,0,0.25);
+    &__left{
+        padding-inline: em(15);
+        padding-block:em(130);
+        background-color: $clr-primary;
+
+        @include breakpoint-md{
+            padding-inline: em(85);
+        }
+    }
+    &__list-item{
+        display: flex;
+        align-items: center;
+        gap:rem(64);
+        padding-block: em(20);
+        svg{
+            text{
+                font-size: rem(44);
+                font-family: $ff-secondary;
+            }
+        }
+    }
+    &__content{
+        font-size: rem(24);
+        line-height: 1.5;
+        font-family: $ff-objsRegular;
+    }
+
+    &__right{
+       height: 100%;
+       position: relative;
+    }
+    &__years-experience{
+        right: 100px;
+    }
+    &__years-experience, 
+    &__rating{
+        padding: em(14) em(30);
+        @include border-radius(9px);
+        box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.08);
+        background-color: $clr-white;
+        position: absolute;
+        @include flex-center;
+        flex-direction: column;
+        margin-top: rem(-110);
+        
+    }
+    &__rating{
+        margin-top: 180px;
+        margin-left: -100px;
+    }
+
+    &__red{
+        width: 30px;
+        height: 26px;
+        margin: 0 0 4px;
+        background-color: #f03c3c;
+        @include border-radius(9px);
+    }
+}
+
+.years-title{
+    font-size: rem(54);
+    color: $clr-secondary;
+    &::after{
+        content: "+";
+    }
+}
+.benefits{
+    background: $clr-primary;
+    padding-block: em(90) em(160);
+    position: relative;
+
+    @include breakpoint-sm{
+        padding-block: em(90) em(260);
+    }
+    @include breakpoint-md{
+        padding-block: em(90) em(360);
+    }
+    @include breakpoint-lg{
+        padding-block: em(90) em(460);
+    }
+
+    &__figure-wrapper{
+        margin-top: rem(-140);
+        position: relative;
+        @include breakpoint-sm{
+            margin-top: rem(-210);
+        }
+        @include breakpoint-md{
+            margin-top: rem(-280);
+        }
+        @include breakpoint-lg{
+            margin-top: rem(-400);
+        }
+        @include breakpoint-xl{
+            margin-top: rem(-494);
+        }
+    }
+}
+
+.video{
+    &__container{
+        position: relative;
+    }
+    &__action-btns{
+        background: $clr-secondary;
+        @include border-radius(50%);
+        @include flex-center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding:em(24);
+        @include breakpoint-md{
+            padding:em(28);
+        }
+        @include breakpoint-lg{
+            padding:em(34);
+        } 
+    }
+    &__play-btn{
+        background: transparent;
+        border: none;
+        outline: none;
+
+        svg{
+            width: rem(24);
+            height: rem(24);
+
+            @include breakpoint-md{
+                width: rem(28);
+                height: rem(28);
+            }
+            @include breakpoint-lg{
+                width: rem(34);
+                height: rem(34);
+            }
+        }
+    }
+}

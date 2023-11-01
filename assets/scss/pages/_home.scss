@@ -114,7 +114,7 @@
 
 //?--------- Projects Styles Start ---------
 .projects{
-    padding-block: em(175) em(200);
+    padding-block: em(140);
     background-color: $clr-primary;
     &__subtitle{
         font-family: $ff-objsRegular;
@@ -244,6 +244,7 @@
     &__summary{
         list-style: none;
         @include flex-center-horizontal;
+        align-items: center;
         gap:rem(48);
         @include transition(all, 0.4s, ease);
         cursor: pointer;
@@ -255,7 +256,7 @@
             display: none;
         }
         &::after{
-            content: "\002B";
+            content: url("../../../assets/icons/chevron-down.svg");
             font-size: rem(28);
         }
         &:hover{
@@ -283,9 +284,10 @@
 }
 
 .faq__details[open] .faq__summary:after{
-  content: "\00D7";
-  font-size: rem(28);
-  color:$clr-secondary;
+    content: url("../../../assets/icons/chevron-down.svg");
+    transform:rotate(180deg);
+    font-size: rem(28);
+    color:$clr-secondary;
 }
 
 .faq__details[open] p{
