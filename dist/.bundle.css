@@ -1186,6 +1186,10 @@ p, ul, ol, body {
   text-align: left;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-white {
   color: #ffffff;
 }
@@ -11790,6 +11794,69 @@ button[type=submit] {
     width: 30.625rem;
     height: 18.75rem;
   }
+}
+
+.experties__checked-box {
+  width: 3.25rem !important;
+}
+
+.sed__figure {
+  position: relative;
+}
+.sed__counter-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -5rem;
+}
+.sed__counter-container .divider {
+  background: #fefefe;
+}
+.sed__counter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.875em 1.25em;
+  background: #d5b276;
+  color: #ffffff;
+}
+@media only screen and (min-width: 48em) {
+  .sed__counter-wrapper {
+    padding: 2.5em 1.25em;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .sed__counter-wrapper {
+    padding: 3.125em 1.25em;
+  }
+}
+.sed__counter-wrapper p {
+  margin-top: 0;
+}
+.sed__counter::after {
+  content: "+";
+}
+
+.meet-owner__details {
+  background: #d5b276;
+}
+
+.clients {
+  height: 638px;
+  background-color: #161616;
+  padding-block: 3.75em;
+}
+
+.build-together {
+  background-image: url("../../../assets/images/renewables_construction.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.build-together__wrapper {
+  background: #161616;
+  padding: 75.2px 34px 75.2px 86px;
 }
 
 .blogs-filter__group {

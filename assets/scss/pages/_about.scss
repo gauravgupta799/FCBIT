@@ -1,0 +1,77 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+
+.experties{
+    &__checked-box{
+        width: rem(52) !important;
+    }
+}
+
+.sed{
+    &__figure{
+        position: relative;
+    }
+    &__counter-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: rem(-80);
+
+        .divider{
+            background: $clr-white-75;
+        }
+    }
+    &__counter-wrapper{
+        @include flex-center;
+        flex-direction: column;
+        padding: em(30) em(20);
+        background: $clr-secondary;
+        color:$clr-white;
+        @include breakpoint-md{
+            padding: em(40) em(20);
+        }
+        @include breakpoint-lg{
+            padding: em(50) em(20);
+        }
+        p{
+            margin-top: 0;
+        }
+    }
+    &__counter{
+        &::after{
+            content: "+";
+        }
+
+    }
+}
+
+.meet-owner{
+
+    &__details{
+        background: $clr-secondary;
+    }
+}
+
+.clients{
+    height: 638px;
+    background-color: $clr-primary;
+    padding-block: em(60);
+}
+
+.build-together{
+    background-image: url("../../../assets/images/renewables_construction.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    &__wrapper{
+        background: $clr-primary;
+        padding: 75.2px 34px 75.2px 86px
+    }
+}
