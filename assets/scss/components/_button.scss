@@ -14,6 +14,7 @@
     color:$clr-white;
     @include border-radius(4px);
     @include transition(all, 0.5s, ease-in-out);
+    text-transform: capitalize;
     &:hover{
         cursor: pointer;
     }
@@ -32,16 +33,8 @@
 }
 
 .btn--tertiary{
-    background:transparent;
+    background:$clr-white;
     color:$clr-secondary;
-    display: inline-flex;
-    align-items: center;
-    border:2px solid $clr-secondary;
-    // &:hover{
-    //     background: $clr-white;
-    //     color:$clr-primary;
-    //     border-color: $clr-primary;
-    // }
 }
 
 .btn--transparent{

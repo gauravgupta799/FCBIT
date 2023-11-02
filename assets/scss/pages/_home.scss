@@ -86,16 +86,17 @@
         
         &::before{
             content: "";
+            // content: url("../../../assets/icons/dotted-line-2.svg");
             position: absolute;
             width: 4px;
             background: $clr-secondary;
             z-index: -1;
             height: calc(100% - 74px);
             opacity: 0.8;
+            // top: rem(70);
         }
     }
     &__checked{
-        // padding-block: em(18);
         padding:em(14);
         @include flex-center;
         @include border-radius(4px);
@@ -104,7 +105,6 @@
             display: flex;
         }
         @include breakpoint-md{
-            // padding-block: em(24);
             padding:em(20);
         }
     }
