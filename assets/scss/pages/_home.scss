@@ -8,10 +8,6 @@
 //?--------- Hero Styles Start ---------
 .hero{
     background: $clr-primary;
-
-    // &--home{
-    //     background: $clr-primary;
-    // }
     &__bgMobile{
         display: block;
         @include breakpoint-lg{
@@ -86,14 +82,12 @@
         
         &::before{
             content: "";
-            // content: url("../../../assets/icons/dotted-line-2.svg");
             position: absolute;
             width: 4px;
             background: $clr-secondary;
             z-index: -1;
             height: calc(100% - 74px);
             opacity: 0.8;
-            // top: rem(70);
         }
     }
     &__checked{
