@@ -64,13 +64,11 @@
 
 // ======== setting font for header and body ======= //
 @mixin font-heading{
-    // font-family:$ff-regular;
+    // font-family: $ff-objsRegular;
 }
-
 @mixin font-body{
     font-family:$ff-regular;
 }
-
 
 @mixin bar($height, $width) {
   transition-duration: 0.5s;
@@ -82,9 +80,9 @@
 
 @mixin bar-before($height, $width, $top) {
     content: "";
+    position: absolute;
     top: $top;
     transition-duration: 0.5s;
-    position: absolute;
     width: $width;
     height: $height;
     background-color: $clr-white;
@@ -93,9 +91,9 @@
 
 @mixin bar-after($height, $width, $top) {
     content: "";
+    position: absolute;
     top: $top;
     transition-duration: 0.5s;
-    position: absolute;
     width: $width;
     height: $height;
     background-color: $clr-white;
@@ -111,4 +109,15 @@
     @keyframes #{$name} {
       @content;
     }
+}
+
+@mixin caret-down{
+    content:"";
+    position: absolute;
+    right: 1rem;
+    top: 55%;
+    pointer-events: none;
+    border-left: 0.35rem solid transparent;
+    border-right: 0.35rem  solid transparent;
+    border-top: 0.35rem solid $clr-primary;
 }

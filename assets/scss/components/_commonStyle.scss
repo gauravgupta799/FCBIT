@@ -4,12 +4,11 @@
 @use '../abstract/functions' as *;
 @use '../abstract/mixins' as *;
 
-
-.footer__link,
-.header__mobile-link{
+// .header__mobile-link,
+.footer__link{
     position: relative;
     display: inline-block;
-    @include transition(0.5s, ease-out);
+    @include transition(all, 0.5s, ease-out);
 
     &::before{
         content:"";
@@ -25,25 +24,30 @@
     }
     &:hover{
         color:$clr-secondary;
-        &::before{
-            transform:scaleX(1);
-        }
+        // &::before{
+        //     transform:scaleX(1);
+        // }
     }
 }
 
-.header__mobile-link{
-    transition:letter-spacing 0.5s ease-out;
-    &::before{
-        bottom: -15px;
-        height: 3px;
-    }
-}
+// .header__mobile-link{
+//     &:hover{
+//         color:$clr-secondary;
+//     }
+// }
+// .header__mobile-link{
+//     transition:letter-spacing 0.5s ease-out;
+//     &::before{
+//         bottom: -15px;
+//         height: 3px;
+//     }
+// }
 
 .header__mobile-link.active{
     color:$clr-secondary;
-    &::before{
-        transform:scaleX(1);
-    }
+    // &::before{
+    //     transform:scaleX(1);
+    // }
 }
 
 .footer__socials-link{
@@ -79,14 +83,7 @@
     }
 }
 
-// .heading-wrapper{
-//     overflow: hidden;
-//     position: relative;
-// }
-
-
 // Socials Styles
-
 .socials{
     &__link{
         @include flex-center;

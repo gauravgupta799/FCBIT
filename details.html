@@ -23,38 +23,40 @@
                        <ul class="header__menu">
                            <li class="header__navItem"><a href="index.html" class="header__navLink">Home</a></li>
                            <li class="header__navItem"><a href="about.html" class="header__navLink">About</a></li>
-                           <li class="header__navItem header__services">
-                               <a href="services.html" class="header__navLink header__services--title">Services </a>
-                               <ul class="header__services--submenu">
-                                   <li class="header__services--item">
-                                       <a href="services.html" class="header__services--link">Commercial Building Inspections</a>
+                           <li class="header__navItem header__submenuContainer">
+                               <a href="services.html" class="header__navLink header__submenu--heading">
+                                   <span>Services</span>
+                               </a>
+                               <ul class="header__submenu">
+                                   <li class="header__submenu--item">
+                                       <a href="#" class="header__submenu--link">Commercial Building Inspections</a>
                                    </li>
-                                   <li class="header__services--item">
-                                       <a href="services.html" class="header__services--link">Property Condition Assessments (PCAs)</a>
+                                   <li class="header__submenu--item">
+                                       <a href="services.html" class="header__submenu--link">Property Condition Assessments (PCAs)</a>
                                    </li>
-                                   <li class="header__services--item">
-                                       <a href="services.html" class="header__services--link">
+                                   <li class="header__submenu--item">
+                                       <a href="services.html" class="header__submenu--link">
                                            Lease Inspections or NNN Lease Inspections
                                        </a>
                                    </li>
-                                   <li class="header__services--item">
-                                       <a href="services.html" class="header__services--link">
+                                   <li class="header__submenu--item">
+                                       <a href="services.html" class="header__submenu--link">
                                            Property Maintenance Inspections
                                        </a>
                                    </li>
-                                   <li class="header__services--item">
-                                       <a href="services.html" class="header__services--link">
+                                   <li class="header__submenu--item">
+                                       <a href="services.html" class="header__submenu--link">
                                            Phase I Environmental Site Assessment (ESA)
                                        </a>
                                    </li>
-                                   <li class="header__services--item">
-                                       <a href="services.html" class="header__services--link">
+                                   <li class="header__submenu--item">
+                                       <a href="services.html" class="header__submenu--link">
                                            Phase II Environmental Site Assessment (ESA)
                                        </a>
                                    </li>
                                </ul>
                            </li>
-                           <li class="header__navItem"><a href="blogs.html" class="header__navLink">Blogs</a></li>
+                           <li class="header__navItem"><a href="blog.html" class="header__navLink">Blog</a></li>
                            <li class="header__navItem"><a href="contact.html" class="header__navLink">Contact</a></li>
                         </ul>
                         <div class="header__btnWrapper">
@@ -85,38 +87,38 @@
                    <ul class="header__mobile-list">
                       <li class="header__mobile-item"><a href="index.html" class="header__mobile-link">Home</a></li>
                       <li class="header__mobile-item"><a href="about.html" class="header__mobile-link">About</a></li>
-                      <li class="header__mobile-item header__services header__services--mobile">
-                           <a href="services.html" class="header__mobile-link">Services</a>
-                           <ul class="header__services--submenu header__services--submenu--mobile">
-                               <li class="header__services--item">
-                                   <a href="services.html" class="header__services--link">Commercial Building Inspections</a>
+                      <li class="header__mobile-item header__submenuContainer--mobile">
+                           <label class="header__mobile-link header__submenu--heading-mobile">Services</label>
+                           <ul class="header__submenu--mobile">
+                               <li class="header__submenu--item-mobile">
+                                   <a href="services.html" class="header__submenu--link-mobile">Commercial Building Inspections</a>
                                </li>
-                               <li class="header__services--item">
-                                   <a href="services.html" class="header__services--link">Property Condition Assessments (PCAs)</a>
+                               <li class="header__submenu--item-mobile">
+                                   <a href="services.html" class="header__submenu--link-mobile">Property Condition Assessments (PCAs)</a>
                                </li>
-                               <li class="header__services--item">
-                                   <a href="services.html" class="header__services--link">
+                               <li class="header__submenu--item-mobile">
+                                   <a href="services.html" class="header__submenu--link-mobile">
                                        Lease Inspections or NNN Lease Inspections
                                    </a>
                                </li>
-                               <li class="header__services--item">
-                                   <a href="services.html" class="header__services--link">
+                               <li class="header__submenu--item-mobile">
+                                   <a href="services.html" class="header__submenu--link-mobile">
                                        Property Maintenance Inspections
                                    </a>
                                </li>
-                               <li class="header__services--item">
-                                   <a href="services.html" class="header__services--link">
+                               <li class="header__submenu--item-mobile">
+                                   <a href="services.html" class="header__submenu--link-mobile">
                                        Phase I Environmental Site Assessment (ESA)
                                    </a>
                                </li>
-                               <li class="header__services--item">
-                                   <a href="services.html" class="header__services--link">
+                               <li class="header__submenu--item-mobile">
+                                   <a href="services.html" class="header__submenu--link-mobile">
                                        Phase II Environmental Site Assessment (ESA)
                                    </a>
                                </li>
                            </ul>
                        </li>
-                      <li class="header__mobile-item"><a href="blogs.html" class="header__mobile-link">Blogs</a></li>
+                      <li class="header__mobile-item"><a href="blog.html" class="header__mobile-link">Blog</a></li>
                       <li class="header__mobile-item"><a href="contact.html" class="header__mobile-link">Contact</a></li>
                    </ul>
                    <div class="header__btnWrapper--mobile mt--3 mt--md--2">
@@ -246,6 +248,15 @@
                              </span>
                         </button>
                      </div>
+                     <div class="video__popup-overlay" id="video-popup-overlay"></div>
+                     <div class="video__popup-container" id="video-popup-container">
+                        <div class="video__popup-close" id="video-popup-close" area-label="close" area-control="video-popup-iframe-container">
+                            <span class="">✖</span>
+                        </div>
+                        <div class="video__popup-iframe-container" id="video-popup-iframe-container">
+                            <iframe class="video__popup-iframe" id="video-popup-iframe" src="https://www.youtube.com/embed/VtV_r0PVNHw" width="100%" height="100%" frameborder="0"></iframe>
+                        </div>
+                    </div>
                 </div>
                 <div class="mx-auto text-center">
                     <a href="#" class="btn btn--primary">
@@ -741,7 +752,8 @@
                                  name="email" 
                                  placeholder="Enter your email address"
                                  class="form__control form__control--footer"
-                                 onblur="" onfocus=""
+                                 onfocus='placeholder=""'
+                                 onblur='placeholder="Enter your email address"'
                                  required
                                  /> 
                                  <button type ="submit" class="btn btn--primary" id="form-send">
@@ -755,28 +767,28 @@
                             <div class="col-6 col-lg-4">
                                 <h6 class="">Comapny</h6>
                                 <ul class="footer__list mt--1 mt--lg--2">
-                                    <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
-                                    <li class="footer__item"><a href="#" class="footer__link">About</a></li>
-                                    <li class="footer__item"><a href="#" class="footer__link">Our Approach</a></li>
-                                    <li class="footer__item"><a href="#" class="footer__link">Support</a></li>
-                                    <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
+                                    <li class="footer__item"><a href="index.html" class="footer__link">Home</a></li>
+                                    <li class="footer__item"><a href="about.html" class="footer__link">About</a></li>
+                                    <li class="footer__item"><a href="our-approach.html" class="footer__link">Our Approach</a></li>
+                                    <li class="footer__item"><a href="support.html" class="footer__link">Support</a></li>
+                                    <li class="footer__item"><a href="blog.html" class="footer__link">Blog</a></li>
                                 </ul>
                             </div>
                             <div class="col-6 col-lg-4">
                                 <h6 class="">Services</h6>
                                 <ul class="footer__list mt--1 mt--lg--2">
-                                    <li class="footer__item"><a href="#" class="footer__link"> Thermal Imaging</a></li>
-                                    <li class="footer__item"><a href="#" class="footer__link">Site Assesment</a></li>
-                                    <li class="footer__item"><a href="#" class="footer__link">Inter Coastal Inspections</a></li>    
+                                    <li class="footer__item"><a href="thermal-imaging.html" class="footer__link">Thermal Imaging</a></li>
+                                    <li class="footer__item"><a href="site-assesment.html" class="footer__link">Site Assesment</a></li>
+                                    <li class="footer__item"><a href="inter-coastal-inspections.html" class="footer__link">Inter Coastal Inspections</a></li>    
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4 mt--3 mt--md--0">
                                 <h6 class="">Contact Us</h6>
                                 <ul class="footer__list mt--1 mt--lg--2">
-                                    <li class="footer__item"><a href="tel: 904-325-9877" class="footer__link" target="_blank"> 904-325-9877</a></li>
-                                    <li class="footer__item"><a href="mailto: chris@intercoastalinspections.com" class="footer__link"> chris@intercoastalinspections.com</a></li>
+                                    <li class="footer__item"><a href="tel:904-325-9877" class="footer__link" target="_blank"> 904-325-9877</a></li>
+                                    <li class="footer__item"><a href="mailto:chris@intercoastalinspections.com" class="footer__link">chris@intercoastalinspections.com</a></li>
                                     <li class="footer__item">
-                                        <span class="footer__link cta__timing"> Mon-Fri 8-7 & Saturday 10 - 3</span>
+                                        <span class="footer__link cta__timing">Mon-Fri 8-7 & Saturday 10 - 3</span>
                                     </li>                 
                                 </ul>
                             </div>

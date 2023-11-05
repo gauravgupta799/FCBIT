@@ -35,20 +35,27 @@ $(document).ready(function() {
     $('.hamburger').click(function(){
         $(".header__mobile").addClass('open');
         $(".overlay").addClass('active');
-        $(".body").addClass("overflow-hidden");
+        $("html").addClass("overflow-hidden");
     });
     $(".overlay").click(function(){
         $(".header__mobile").removeClass('open');
         $(".overlay").removeClass('active');
-        $(".body").removeClass("overflow-hidden");
+        $("html").removeClass("overflow-hidden");
     });
-    // $(".footer__input input").focusin(function(){
-    //     $(".footer__input").addClass("border-color");
-    //     $(".footer__input").removeClass("error");
-    // })
-    // $(".footer__input input").focusout(function(){
-    //     $(".footer__input").removeClass("border-color");
-    // });
+    $(".header__submenu--mobile").hide();
+    $(".header__submenu--heading-mobile").click(function(e){
+        $(".header__submenu--mobile").toggle(1000);
+    });
+    $(".video__action-btns").click(function (e){
+      $(".video__popup-container").addClass('video-show');
+      $(".video__popup-overlay").addClass('video-overlay-show');
+      $("html").addClass("overflow-hidden");
+    });
+    $(".video__popup-close").click(function(){
+      $(".video__popup-container").removeClass('video-show');
+      $(".video__popup-overlay").removeClass('video-overlay-show');
+      $("html").removeClass("overflow-hidden");
+    });
 })
 // Mobile Menu Toggle End
 

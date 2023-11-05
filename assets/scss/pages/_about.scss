@@ -5,7 +5,6 @@
 @use "../abstract/mixins" as *;
 
 
-
 .experties{
     &__checked-box{
         width: rem(52) !important;
@@ -127,25 +126,31 @@
     }
     .swiper-pagination-progressbar {
       position: relative;
-      margin-bottom: 70px;
-      margin-top:54px;
+      margin-bottom: rem(70);
+      margin-top:rem(36);
       background-color: transparent;
       height: 4px;
       border-bottom: 2px solid $clr-grey-light-4;
       width: 75%;
+      @include breakpoint-md{
+        margin-top:rem(54);
+      }
       &-fill {
         background-color: $clr-secondary;
         height: 4px;
         top: 1.8px;
       }
       &:after {
+        content: "";
         position: absolute;
-        top: 3px;
+        top: rem(2);
         right: -100%;
         width: 100%;
         height: 2px;
         background-color: $clr-grey-light-4;
-        content: "";
+        @include breakpoint-md{
+          top: rem(3);
+        }
       }
     }
     .swiper-pagination-custom {

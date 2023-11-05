@@ -35,27 +35,25 @@
             outline-color: $clr-secondary;
         }
         &--footer{
-            // outline: none;
             border-top-right-radius:0px;
             border-bottom-right-radius:0px;
             background-color: $clr-white;
         }
-        &--select{
-            padding-block:em(19); 
-        }
     }
+}
+.service-lable{
+    opacity: 0.5;
 }
 
 button[type="submit"]{
-    padding: em(16) em(32);
+    padding: 0.9em 2em;
 }
 
 
 // Custome Checkbox
 .form__group .form-check-input {
     padding: 0;
-    height: initial;
-    width: initial;
+    @include dimensions(initial, initial);
     margin-bottom: 0;
     display: none;
     cursor: pointer;
@@ -65,8 +63,7 @@ button[type="submit"]{
     text-transform: capitalize;
     position: relative;
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    @include flex-center-vertical;
 }
   
 .form__group .form-check-label::before {
@@ -95,8 +92,7 @@ button[type="submit"]{
     position: absolute;
     top: 8px;
     left: 6px;
-    width:rem(6.4);
-    height: rem(12);
+    @include dimensions(rem(6.4), rem(12));
     border: 1.8px solid $clr-secondary;
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
@@ -111,55 +107,3 @@ button[type="submit"]{
         height: rem(16);
     }
 }
-
-
-
-
-
-
-
-
-// Custome select 
-// select{
-//     min-width: 350px;
-//     position: relative;
-// }
-  
-// .form__control--select{
-//     appearance: none;
-//     -webkit-appearance: none;
-//     width: 100%;
-//     padding: 0.675em 6em 0.675em 1em;
-//     color: #000;
-// }
-  
- 
-//   .form__control--select::after {
-//     content: "";
-//     position: absolute;
-//     right: 1rem;
-//     pointer-events: none;
-//   }
-  
-
-// .form__control--select::after {
-//     border-left: 0.3rem solid transparent;
-//     border-right: 0.3rem solid transparent;
-//     border-top: 0.3rem solid black;
-//     top: 55%;
-// }
-  
-
-
-
-// #submit{
-//     font-size: rem(18);
-//     @include breakpoint-md{
-//         font-size: rem(20);
-//     }
-// }
-
-// #submit:disabled{
-//     cursor: not-allowed;
-//     opacity: 0.6;
-// }
