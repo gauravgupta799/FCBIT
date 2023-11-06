@@ -11352,17 +11352,17 @@ p, ul, ol, body {
 
 .form__group {
   margin-bottom: 1rem;
+  position: relative;
 }
 .form__group--footer {
   display: flex;
   background: rgb(255, 255, 255);
   border-radius: 9px;
 }
-.form__group--contact {
-  outline: 2px solid #636363;
-  display: flex;
-  align-items: center;
-  padding-left: 1.25em;
+.form__icon {
+  position: absolute;
+  padding: 0.6em 0 0.75em 1em;
+  pointer-events: none;
 }
 .form__control {
   width: 100%;
@@ -11385,9 +11385,9 @@ p, ul, ol, body {
   border-bottom-right-radius: 0px;
   background-color: rgb(255, 255, 255);
 }
-
-.service-lable {
-  opacity: 0.5;
+.form__control--contact, .form__control--select, .form__control--textarea {
+  outline: 2px solid #636363;
+  padding-left: 3.125em;
 }
 
 button[type=submit] {
@@ -11528,8 +11528,8 @@ button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11542,6 +11542,42 @@ button[type=submit] {
 }
 .socials__link:hover svg path {
   fill: rgb(255, 255, 255);
+}
+
+.loader-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: #161616;
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.loader {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+  background: radial-gradient(circle closest-side, #d5b276 94%, #161616) right/calc(200% - 1em) 100%;
+  animation: loader-anim 1s infinite alternate linear;
+}
+.loader::before {
+  content: "Loading...";
+  line-height: 1em;
+  color: rgb(255, 255, 255);
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, rgb(255, 255, 255) 94%, #161616);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@keyframes loader-anim {
+  100% {
+    background-position: left;
+  }
 }
 
 .hero {
@@ -11780,8 +11816,8 @@ button[type=submit] {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  transition: all 0.4s ease;
-  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
 }
 @media only screen and (min-width: 36em) {
   .faq__summary {
@@ -11792,18 +11828,35 @@ button[type=submit] {
   display: none;
 }
 .faq__summary::after {
-  content: url("../../../assets/icons/chevron-down.svg");
-  font-size: 1.75rem;
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 55%;
+  pointer-events: none;
+  border-left: 0.35rem solid transparent;
+  border-right: 0.35rem solid transparent;
+  border-top: 0.35rem solid #161616;
+  border-width: 0.5em;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transition: all 0.35s ease;
 }
-.faq__summary:hover h4, .faq__summary:hover::after {
+.faq__summary:hover {
+  cursor: pointer;
+}
+.faq__summary:hover h4 {
   color: #d5b276;
 }
+.faq__summary:hover::after {
+  border-top-color: #d5b276;
+}
 .faq__details {
-  border-bottom: 1px solid #9d9d9d;
+  border-bottom: 1px solid #a2a2a2;
   padding: 1.125em 1em;
 }
 .faq__details:first-child {
-  border-top: 1px solid #9d9d9d;
+  border-top: 1px solid #a2a2a2;
 }
 .faq__details:hover {
   background: #f4f4f4;
@@ -11815,10 +11868,9 @@ button[type=submit] {
 }
 
 .faq__details[open] .faq__summary:after {
-  content: url("../../../assets/icons/chevron-down.svg");
-  transform: rotate(180deg);
-  font-size: 1.75rem;
-  color: #d5b276;
+  top: 40%;
+  border-top-color: #d5b276;
+  transform: translateY(-50%) rotate(-180deg);
 }
 
 .faq__details[open] p {
@@ -11980,7 +12032,7 @@ button[type=submit] {
 
 .swiper-container-wrapper--timeline .swiper-slide {
   display: flex;
-  background: #fff;
+  background: rgb(255, 255, 255);
   min-height: 300px;
   align-items: center;
   justify-content: center;
@@ -12006,10 +12058,17 @@ button[type=submit] {
   height: 4px;
   border-bottom: 2px solid #aeaeae;
   width: 75%;
+  left: -20px;
 }
 @media only screen and (min-width: 48em) {
   .swiper-container-wrapper--timeline .swiper-pagination-progressbar {
+    left: 0;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .swiper-container-wrapper--timeline .swiper-pagination-progressbar {
     margin-top: 3.375rem;
+    left: 0;
   }
 }
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar-fill {
@@ -12036,11 +12095,18 @@ button[type=submit] {
   list-style: none;
   margin: 1rem 0;
   padding: 0;
-  display: flex;
   line-height: 1.66;
   bottom: 0;
   width: 100%;
   display: flex;
+  -moz-column-gap: 7.5rem;
+       column-gap: 7.5rem;
+}
+@media only screen and (min-width: 48em) {
+  .swiper-container-wrapper--timeline .swiper-pagination-custom {
+    -moz-column-gap: auto;
+         column-gap: auto;
+  }
 }
 .swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch {
   position: relative;
@@ -12088,6 +12154,26 @@ button[type=submit] {
   background: #aeaeae;
 }
 
+.swiper-pagination-container {
+  padding-left: 2.75em;
+}
+@media only screen and (min-width: 85.375em) {
+  .swiper-pagination-container {
+    padding-left: 0em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-pagination-container {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    scrollbar-color: #d5b276;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+  }
+}
 .blogs-filter__group {
   display: flex;
   align-items: center;
@@ -12470,7 +12556,6 @@ button[type=submit] {
 }
 
 .contact-us__form .form__control {
-  outline: none;
   border: none;
   background: transparent;
 }
@@ -12733,7 +12818,7 @@ button[type=submit] {
   position: fixed;
   top: 0;
   z-index: 99;
-  width: 80%;
+  width: 75%;
   height: 100vh;
   padding-block: 1em;
   background: #161616;

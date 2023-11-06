@@ -159,7 +159,7 @@
         position: fixed;
         top: 0;
         z-index: 99;
-        @include dimensions(80%, 100vh);
+        @include dimensions(75%, 100vh);
         padding-block:em(16);
         background: $clr-primary;
         color: $clr-white;

@@ -2,8 +2,14 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 const body = document.querySelector("#body");
 const header = document.querySelector('.header');
 
+//======  Loader start ======
+window.onload = () => {
+  const loader = document.querySelector(".loader-container");
+  loader.style.display = "none";
+}
+//====== Loader start ======
 
-// Function to toggle the "sticky" class on the header
+//====== Sticky header start ======
 function toggleHeaderSticky(scrollY){
   if (scrollY > 20){
     header.classList.add("sticky");
@@ -14,11 +20,10 @@ function toggleHeaderSticky(scrollY){
 window.addEventListener("scroll",()=>{
   const scrollY = window.scrollY;
   toggleHeaderSticky(scrollY);
-})
-//======  Sticky header end ======
+});
+//====== Sticky header end ======
 
-
-// ======  Active Page Link start ======
+//====== Active Page Link start ======
 const windowPathname = window.location.pathname;
 const navLinks = document.querySelectorAll(".header__navLink");
 navLinks.forEach(link =>{
@@ -26,11 +31,10 @@ navLinks.forEach(link =>{
   if((windowPathname === navLinkPathname) || (windowPathname === "/index.html" && navLinkPathname === "/")){
     link.classList.add("active");
   }
-})
-//======  Active Page Link end ======
+});
+//====== Active Page Link end ======
 
-
-// Mobile Menu Toggle start
+//====== Mobile Menu Toggle start ======
 $(document).ready(function() {
     $('.hamburger').click(function(){
         $(".header__mobile").addClass('open');
@@ -56,11 +60,10 @@ $(document).ready(function() {
       $(".video__popup-overlay").removeClass('video-overlay-show');
       $("html").removeClass("overflow-hidden");
     });
-})
-// Mobile Menu Toggle End
+});
+//====== Mobile Menu Toggle end ======
 
-
-// Timeline start
+//====== Timeline start ======
 $(document).ready(function () {
   var mySwiper = new Swiper(".swiper-container--timeline", {
     autoHeight: true,
@@ -80,7 +83,8 @@ $(document).ready(function () {
     },
     loop: false,
     effect: "slide",
-    spaceBetween: 25,
+    spaceBetween: 15,
+    slidesPerView:1,
     on: {
       init: function () {
         $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
@@ -90,7 +94,13 @@ $(document).ready(function () {
         $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
         $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
       }
-    }
+    },
+    breakpoints:{
+      540:{
+        spaceBetween: 25,
+      },
+  }
+    
   });
   $(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
     mySwiper.slideTo($(this).index());
@@ -98,14 +108,12 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 });
-// Timeline end
+//====== Timeline end ======
 
-
-// Swiper start
+//====== Swipers start ======
 const swiper1 = new Swiper(".swiper-project", {
     spaceBetween:30,
     slidesPerView:1,
-    // grabCursor:true,
     navigation: {
       nextEl: ".chevron--next",
       prevEl: ".chevron--prev",
@@ -113,63 +121,31 @@ const swiper1 = new Swiper(".swiper-project", {
     breakpoints:{
         768:{
             slidesPerView:1.5,
-            // spaceBetween:15,
         },
         992:{
             slidesPerView:2.5,
-            // spaceBetween:5,
         },
     }
-})
+});
 
-// Swiper Cutomers
 const swiper2 = new Swiper(".swiper-customers", {
     spaceBetween:30,
     slidesPerView:1,
     grabCursor:true,
+    autoplay:{
+      delay:3000,
+    },
     breakpoints:{
         768:{
             slidesPerView:1.2,
-            // spaceBetween:15,
         },
         992:{
             slidesPerView:1.8,
-            // spaceBetween:5,
         },
     }
-})
+});
+//====== Swipers end ======
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // form Validation start
-// document.getElementById("footer__form").addEventListener("~submit", (e) => {
-//     e.preventDefault();
-//     const inputField = document.querySelector('input[type="email"]');
-//     if(inputField.value != ""){
-//         $(".footer__input").removeClass("error");
-//         inputField.value = "";
-//     }else{
-//         $(".footer__input").addClass("error");
-//     }
-// })
-// // form Validation end 
+//====== Animation start ======
+//====== Animation end ======

@@ -87,12 +87,11 @@
 .socials{
     &__link{
         @include flex-center;
-        width: rem(36);
-        height: rem(36);
+        width: rem(40);
+        height: rem(40);
         @include flex-center;
         @include border-radius(50%);
         border:1px solid transparent;
-
         &:hover{
             border: solid 1px $clr-secondary;
             background-color: $clr-secondary;

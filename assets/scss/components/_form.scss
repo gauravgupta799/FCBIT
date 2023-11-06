@@ -8,16 +8,17 @@
 .form{
     &__group{
         margin-bottom: rem(16);
+        position: relative;
         &--footer{
             display: flex;
             background: $clr-white;
             @include border-radius(9px);
         }
-        &--contact{
-            outline:2px solid $clr-border;
-            @include flex-center-vertical;
-            padding-left: em(20);
-        }
+    }
+    &__icon{
+        position: absolute;
+        padding: em(9.6) 0 em(12) em(16);
+        pointer-events: none;
     }
     &__control{
         width: 100%;
@@ -39,15 +40,23 @@
             border-bottom-right-radius:0px;
             background-color: $clr-white;
         }
+        &--contact, &--select, &--textarea{
+            outline:2px solid $clr-border;
+            padding-left: em(50);
+        }
     }
-}
-.service-lable{
-    opacity: 0.5;
 }
 
 button[type="submit"]{
     padding: 0.9em 2em;
 }
+
+// #form2-btn{
+//     &:disabled{
+//         opacity: 0.8;
+//         pointer-events: none;
+//     }
+// }
 
 
 // Custome Checkbox

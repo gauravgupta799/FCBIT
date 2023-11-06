@@ -240,9 +240,8 @@
         @include flex-center-horizontal;
         align-items: center;
         gap:rem(48);
-        @include transition(all, 0.4s, ease);
-        cursor: pointer;
-    
+        @include transition(all, 0.35s, ease);
+        position: relative;
         @include breakpoint-sm{
             justify-content: space-between;
         }
@@ -250,24 +249,31 @@
             display: none;
         }
         &::after{
-            content: url("../../../assets/icons/chevron-down.svg");
-            font-size: rem(28);
+            @include caret-down;
+            border-width: 0.5em;
+            top: 50%;
+            right: 0;
+            transform:translateY(-50%);
+            @include transition(all, 0.35s, ease);
         }
         &:hover{
-            h4, &::after{
+            cursor: pointer;
+            h4{
                 color:$clr-secondary;
+            }
+            &::after{
+                border-top-color: $clr-secondary;
             }
         }
     }
-
     &__details{
-        border-bottom: 1px solid  #9d9d9d;
+        border-bottom: 1px solid  $clr-grey-light-2;
         padding: em(18) em(16);
         &:first-child{
-            border-top:1px solid #9d9d9d;
+            border-top:1px solid $clr-grey-light-2;
         }
         &:hover{
-            background: #f4f4f4;
+            background: $clr-white-90;
         }
     }
 }
@@ -278,10 +284,9 @@
 }
 
 .faq__details[open] .faq__summary:after{
-    content: url("../../../assets/icons/chevron-down.svg");
-    transform:rotate(180deg);
-    font-size: rem(28);
-    color:$clr-secondary;
+    top: 40%;
+    border-top-color: $clr-secondary;
+    transform: translateY(-50%) rotate(-180deg);
 }
 
 .faq__details[open] p{
