@@ -60,7 +60,10 @@
           padding-inline:em(36);
         }
         @include breakpoint-lg{
-          padding:em(70) em(80);
+          padding:em(90.88) em(80);
+        }
+        @include breakpoint-xl{
+          padding:em(90.88) em(80);
         }
     }
 }

@@ -72,9 +72,9 @@
 }
 
 .custom-select-wrapper {
+    width: 100%;
     min-width: 280px;
     position: relative;
-
     &::after{
         @include caret-down;
     }

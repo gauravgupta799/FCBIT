@@ -7,7 +7,7 @@ window.onload = () => {
   const loader = document.querySelector(".loader-container");
   loader.style.display = "none";
 }
-//====== Loader start ======
+//====== Loader end ======
 
 //====== Sticky header start ======
 function toggleHeaderSticky(scrollY){
@@ -148,4 +148,117 @@ const swiper2 = new Swiper(".swiper-customers", {
 
 
 //====== Animation start ======
+gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline();
+
+window.addEventListener("load",() => {
+  tl.from(".header__logo, .header__navItem, .header__btnWrapper", {
+      opacity:0,
+      duration:1,
+      stagger:0.25,
+      ease: Power4.easeOut,
+  });
+  tl.from(".heading",{
+      opacity:0,
+      duration:1,
+      y:50,
+      stagger:0.5,
+      ease: Power4.easeInOut,
+  });
+  tl.from(".hero-btn", {
+      opacity:0,
+      x:-50,
+      ease:Power4.easeOut,
+  });
+})
+
+//  animation fade in 
+const fadeIn = gsap.utils.toArray(".animate-fade-in");
+fadeIn.forEach((mainContent, i) => {
+  const anim = gsap.fromTo(
+    mainContent,
+    { opacity: 0},
+    {opacity: 1,duration: 1 }
+  );
+  ScrollTrigger.create({
+    trigger: mainContent,
+    animation: anim,
+    toggleActions: "play",
+    once: true,
+    duration: 1,
+    stagger:0.5,
+    ease: Power4.easeOut,
+  });
+});
+
+// animate fade in up
+const textContainers = gsap.utils.toArray(".animate-fade-in-up");
+textContainers.forEach((item, i) => {
+  const anim = gsap.fromTo(
+    item,
+    { opacity: 0, y: 50},
+    { opacity: 1, y: 0,duration: 1  }
+  );
+  ScrollTrigger.create({
+    trigger: item,
+    animation: anim,
+    toggleActions: "play",
+    once: true,
+    duration: 1,
+    stagger:1,
+    ease: Power4.easeOut,
+  });
+});
+
+const fadeIn2 = gsap.utils.toArray(".fade-in");
+fadeIn2.forEach((mainContent, i) => {
+  const anim = gsap.fromTo(mainContent,
+    { opacity: 0,},
+    {opacity: 1, duration:1}
+  );
+  ScrollTrigger.create({
+    trigger: mainContent,
+    animation: anim,
+    toggleActions: "play",
+    once: true,
+    stagger:0.2,
+    ease: Power4.easeOut,
+  });
+});
+
+// divider
+// tl.from(".divider", {
+//   ScrollTrigger:{
+//       duration: 1,
+//       scrub: true,
+//       ease: Power4.easeOut,
+//   },
+//   scaleX:0, 
+//   transformOrigin:"left",
+//   ease: Power4.easeOut
+// });
+
+let revealContainers = document.querySelectorAll(".reveal");
+
+revealContainers.forEach((container) => {
+  let image = container.querySelector("img");
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      toggleActions: "restart none none reset"
+    }
+  });
+
+  tl.set(container, { autoAlpha: 1 });
+  tl.from(container, 1.5, {
+    xPercent: -100,
+    ease: Power2.out
+  });
+  tl.from(image, 1.5, {
+    xPercent: 100,
+    scale: 1.3,
+    delay: -1.5,
+    ease: Power2.out
+  });
+});
 //====== Animation end ======

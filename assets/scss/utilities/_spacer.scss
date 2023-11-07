@@ -4,7 +4,7 @@
     // Create a list of sizes and widths
     $sizes: (
       sm: em(576),
-      md: em(767),
+      md: em(768),
       lg: em(992),
       xl: em(1366),
       xxl: em(1600),
@@ -28,7 +28,6 @@ $spaceamounts: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 1
 $base-multiplier:1;
 
 @each $space in $spaceamounts { // looping throw the spacing value
- 
     .m{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &-#{$space} {
@@ -36,7 +35,6 @@ $base-multiplier:1;
             }
         }
     }
-
     .mx{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -45,7 +43,6 @@ $base-multiplier:1;
             }
         }
     }
-
     .my{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -54,7 +51,6 @@ $base-multiplier:1;
             }
         }
     }
-
     .ml{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -62,7 +58,6 @@ $base-multiplier:1;
             }
         }
     }
-
     .mr{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -70,7 +65,6 @@ $base-multiplier:1;
             }
         } 
     }
-
     .mb{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -78,7 +72,6 @@ $base-multiplier:1;
             }
         } 
     }
-
     .mt{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -94,7 +87,6 @@ $base-multiplier:1;
             }
         }
     }
- 
     .px{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -103,7 +95,6 @@ $base-multiplier:1;
             }
         } 
     }
-
     .py{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -112,7 +103,6 @@ $base-multiplier:1;
             }
         }   
     }
-
     .pl{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -120,7 +110,6 @@ $base-multiplier:1;
             }
         } 
     }
-
     .pr{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -128,7 +117,6 @@ $base-multiplier:1;
             }
         } 
     }
-
     .pb{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{
@@ -136,7 +124,6 @@ $base-multiplier:1;
             }
         } 
     }
-
     .pt{
         @include generate-responsive(){ // to add the prefix of breakpoint
             &--#{$space}{

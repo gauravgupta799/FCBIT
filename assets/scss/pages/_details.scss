@@ -39,13 +39,28 @@
 }
 
 .what-get{
-    background: rgba(0,0,0,0.25);
+    // background: $clr-primary;
+    &__lists{
+        position: relative;
+        z-index: 1;
+        &::before{
+            content: '';
+            position: absolute;
+            height:calc(100% - 80px);
+            left: 15px;
+            top: 35px;
+            width: 2px;
+            z-index: -1;
+            background-image: repeating-linear-gradient(to bottom, transparent, transparent 3px, $clr-secondary 3px, $clr-secondary 6px);
+        }
+    }
     &__left{
         padding-inline: em(15);
-        padding-block:em(130);
+        padding-block:em(80);
         background-color: $clr-primary;
         @include breakpoint-md{
             padding-inline: em(85);
+            padding-block:em(78.4);
         }
     }
     &__list-item{
@@ -65,7 +80,6 @@
         line-height: 1.5;
         font-family: $ff-objsRegular;
     }
-
     &__right{
        height: 100%;
        position: relative;
@@ -89,7 +103,6 @@
         margin-top: 180px;
         margin-left: -100px;
     }
-
     &__red{
         width: 30px;
         height: 26px;
@@ -106,6 +119,7 @@
         content: "+";
     }
 }
+
 .benefits{
     background: $clr-primary;
     padding-block: em(90) em(160);
@@ -272,6 +286,23 @@
             cursor: pointer;
             background: $clr-primary;
             color: $clr-white;
+        }
+    }
+}
+
+.commercial{
+    &__figure{
+        position: relative;
+        z-index: 1;
+        &::before{
+            content:"";
+            position: absolute;
+            @include dimensions(rem(65), rem(65));
+            @include border-radius(50%);
+            background-color: $clr-secondary;
+            z-index: -1;
+            margin-top: -31px;
+            margin-left: 11px;
         }
     }
 }

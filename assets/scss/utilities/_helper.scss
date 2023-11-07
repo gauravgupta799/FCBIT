@@ -13,7 +13,6 @@
     width:100%;
     object-fit:cover;
 }
-
 .text-primary{
     color:$clr-primary;
 }
@@ -68,7 +67,18 @@
 }
 
 
-// .heading-wrapper{
-//     overflow: hidden;
-//     position: relative;
-// }
+.heading-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+
+.reveal {
+    visibility: hidden;
+    position: relative;
+    // width: 80%;
+    // height: 80%;
+    // max-width: 500px;
+    overflow: hidden;
+  }
+  

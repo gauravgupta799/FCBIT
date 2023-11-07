@@ -17,6 +17,18 @@
         background-color: $clr-primary;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         padding-block:em(8);
+        animation:move-down 0.45s ease-in;
+        @include keyframes(move-down){
+            0%{
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+        }
     }
     &__wrapper{
         width: 100%;
