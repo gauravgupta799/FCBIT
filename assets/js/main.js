@@ -7,6 +7,30 @@ window.onload = () => {
   const loader = document.querySelector(".loader-container");
   loader.style.display = "none";
 }
+gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline();
+
+window.addEventListener("load",() => {
+  tl.from(".header__logo, .header__navItem, .header__btnWrapper", {
+      opacity:0,
+      duration:1,
+      stagger:0.23,
+      ease: Power4.easeOut,
+  });
+  tl.from(".heading",{
+      opacity:0,
+      duration:1,
+      delay:-1,
+      y:50,
+      stagger:0.5,
+      ease: Power4.easeInOut,
+  });
+  tl.from(".hero-btn", {
+      opacity:0,
+      x:-50,
+      ease:Power4.easeOut,
+  });
+})
 //====== Loader end ======
 
 //====== Sticky header start ======
@@ -148,29 +172,6 @@ const swiper2 = new Swiper(".swiper-customers", {
 
 
 //====== Animation start ======
-gsap.registerPlugin(ScrollTrigger);
-const tl = gsap.timeline();
-
-window.addEventListener("load",() => {
-  tl.from(".header__logo, .header__navItem, .header__btnWrapper", {
-      opacity:0,
-      duration:1,
-      stagger:0.25,
-      ease: Power4.easeOut,
-  });
-  tl.from(".heading",{
-      opacity:0,
-      duration:1,
-      y:50,
-      stagger:0.5,
-      ease: Power4.easeInOut,
-  });
-  tl.from(".hero-btn", {
-      opacity:0,
-      x:-50,
-      ease:Power4.easeOut,
-  });
-})
 
 //  animation fade in 
 const fadeIn = gsap.utils.toArray(".animate-fade-in");
@@ -213,7 +214,7 @@ textContainers.forEach((item, i) => {
 const fadeIn2 = gsap.utils.toArray(".fade-in");
 fadeIn2.forEach((mainContent, i) => {
   const anim = gsap.fromTo(mainContent,
-    { opacity: 0,},
+    { opacity: 0, duration:1},
     {opacity: 1, duration:1}
   );
   ScrollTrigger.create({
@@ -221,22 +222,10 @@ fadeIn2.forEach((mainContent, i) => {
     animation: anim,
     toggleActions: "play",
     once: true,
-    stagger:0.2,
+    // stagger:0.5,
     ease: Power4.easeOut,
   });
 });
-
-// divider
-// tl.from(".divider", {
-//   ScrollTrigger:{
-//       duration: 1,
-//       scrub: true,
-//       ease: Power4.easeOut,
-//   },
-//   scaleX:0, 
-//   transformOrigin:"left",
-//   ease: Power4.easeOut
-// });
 
 let revealContainers = document.querySelectorAll(".reveal");
 

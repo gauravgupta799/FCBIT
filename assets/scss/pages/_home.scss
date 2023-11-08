@@ -59,10 +59,7 @@
 //?--------- Process Styles Start ---------
 .process{
     background-image: url("../../../assets/images/renewables_construction.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-
+    @include background-cover;
     &__card{
         padding: em(40) em(6);
         background-color: $clr-white;
@@ -82,9 +79,8 @@
         margin-top: 0;
     }
     &__checkedWrapper{
-        display: flex;
+        @include flex-center-vertical;
         flex-direction: column;
-        align-items: center;
         padding-top:rem(16);
         row-gap: rem(105);
         position: relative;
@@ -93,11 +89,10 @@
         &::before{
             content: "";
             position: absolute;
-            width: 4px;
-            background: $clr-secondary;
             z-index: -1;
-            height: calc(100% - 74px);
-            opacity: 0.8;
+            background-image: repeating-linear-gradient(180deg,transparent,transparent 3px,$clr-secondary 0,$clr-secondary 8px);
+            height: calc(100% - 80px);
+            width: 2px;
         }
     }
     &__checked{
