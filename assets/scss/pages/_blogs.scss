@@ -8,10 +8,8 @@
 
 .blogs-filter{
     &__group{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
         background: transparent;
-    
         select{
             background: transparent !important;
             border:none;
@@ -28,8 +26,7 @@
 
 .custome-search{
     width: 100%;
-    display: flex;
-    align-items: center;
+    @include flex-center-vertical;
     justify-content: space-between;
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.6);
 }
@@ -77,6 +74,9 @@
     position: relative;
     &::after{
         @include caret-down;
+    }
+    @include breakpoint-lg{
+        width: auto;
     }
 }
 

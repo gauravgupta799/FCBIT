@@ -7,11 +7,15 @@
 
 .footer{
     &__top{
-        background-color: #f4f4f4;
+        background-color: $clr-white-90;
     }
     &__bottom{
         background:$clr-secondary;
-        padding-block: em(20);
+        padding-block: em(16);
+        p{
+            height: 100%;
+           @include flex-center-vertical;
+        }
     }
     &__link{
         font-size: rem(16);
@@ -27,8 +31,7 @@
 
 .socials{
     &__list{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
         gap:em(32);
     }
 }

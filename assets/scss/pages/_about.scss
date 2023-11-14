@@ -6,8 +6,13 @@
 
 
 .experties{
-    &__checked-box{
-        width: rem(52) !important;
+    &__figure{
+        position: relative;
+    }
+    &__rating{
+        top: -50px;
+        right: 1%;
+        padding: em(16);
     }
 }
 
@@ -50,7 +55,6 @@
 }
 
 .meet-owner{
-
     &__details{
         background: $clr-secondary;
         padding: em(60) em(24);
@@ -66,6 +70,17 @@
         @include breakpoint-xl{
           // padding:em(64) em(80);
           padding:em(90.88) em(80);
+        }
+    }
+    &__figure{
+        position: relative;
+    }
+    &__experience{
+        bottom: 70px;
+        right: 4%;
+        @include breakpoint-lg{
+            bottom: 100px;
+            right: -3%;
         }
     }
 }
@@ -104,3 +119,8 @@
     }
 }
 
+.timeline{
+    &__year{
+        font-size: clamp(2.5rem, 6vw + 1rem, 5rem);
+    }
+}

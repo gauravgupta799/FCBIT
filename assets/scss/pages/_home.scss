@@ -117,8 +117,10 @@
     background-color: $clr-primary;
     &__subtitle{
         font-family: $ff-objsRegular;
+        color:$clr-white;
         font-size: rem(24);
         line-height: 1.5;
+        margin-top: rem(16);
     }
     &__chevrons{
         display: flex;

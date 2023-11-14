@@ -856,6 +856,8 @@ address {
 small {
   font-size: 1rem;
   line-height: 1.75;
+  display: flex;
+  margin-top: 1rem;
 }
 
 p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
@@ -11134,6 +11136,42 @@ p, ul, ol, body {
   }
 }
 
+.loader-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: #161616;
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.loader {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+  background: radial-gradient(circle closest-side, #d5b276 94%, #161616) right/calc(200% - 1em) 100%;
+  animation: loader-anim 1s infinite alternate linear;
+}
+.loader::before {
+  content: "Loading...";
+  line-height: 1em;
+  color: rgb(255, 255, 255);
+  background: inherit;
+  background-image: radial-gradient(circle closest-side, rgb(255, 255, 255) 94%, #161616);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+@keyframes loader-anim {
+  100% {
+    background-position: left;
+  }
+}
+
 .page-container {
   max-width: none;
   margin: 0 1rem;
@@ -11221,7 +11259,7 @@ p, ul, ol, body {
   padding: 0.375em 1.25em;
   color: rgb(255, 255, 255);
   border-radius: 4px;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-out;
   text-transform: capitalize;
   z-index: 1;
 }
@@ -11231,8 +11269,8 @@ p, ul, ol, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 20px;
-  width: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 50%;
   z-index: -1;
 }
@@ -11246,11 +11284,11 @@ p, ul, ol, body {
   cursor: pointer;
 }
 .btn:hover::before {
-  animation: collisionLeft 0.8s both;
+  animation: collisionLeft 0.35s both;
   animation-direction: alternate;
 }
 .btn:hover::after {
-  animation: collisionRight 0.8s both;
+  animation: collisionRight 0.35s both;
   animation-direction: alternate;
 }
 @media only screen and (min-width: 48em) {
@@ -11335,16 +11373,28 @@ p, ul, ol, body {
   fill: rgb(255, 255, 255);
 }
 
+.btn--outline {
+  background: transparent;
+  color: #d5b276;
+  border: 2px solid #d5b276;
+}
+.btn--outline:hover {
+  border-color: rgb(255, 255, 255);
+}
+
 .btn--primary::before, .btn--primary::after,
 .btn--tertiary::before,
 .btn--tertiary::after,
 .btn--transparent::before,
-.btn--transparent::after {
+.btn--transparent::after,
+.btn--outline::before,
+.btn--outline::after {
   background-color: #161616;
 }
 
 .btn--tertiary:hover,
-.btn--transparent:hover {
+.btn--transparent:hover,
+.btn--outline:hover {
   color: rgb(255, 255, 255);
 }
 
@@ -11388,7 +11438,7 @@ p, ul, ol, body {
   caret-color: #d5b276;
   border-radius: 2px;
 }
-.form__control:focus {
+.form__control:focus, .form__control:hover {
   outline-color: #d5b276;
 }
 .form__control--footer {
@@ -11474,7 +11524,6 @@ button[type=submit] {
 .footer__link {
   position: relative;
   display: inline-block;
-  transition: all 0.5s ease-out;
 }
 .footer__link::before {
   content: "";
@@ -11539,8 +11588,8 @@ button[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11555,39 +11604,34 @@ button[type=submit] {
   fill: rgb(255, 255, 255);
 }
 
-.loader-container {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  background: #161616;
-  z-index: 1000000;
+.stars .star {
+  font-size: 1.125rem;
+  color: #f7ba00;
+}
+
+.checked-box {
+  padding: 0.3125em;
+  background-color: #d5b276;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
 }
 
-.loader {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
-  background: radial-gradient(circle closest-side, #d5b276 94%, #161616) right/calc(200% - 1em) 100%;
-  animation: loader-anim 1s infinite alternate linear;
+.card {
+  padding: 0.625em 1.25em;
+  border-radius: 9px;
+  box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.08);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.loader::before {
-  content: "Loading...";
-  line-height: 1em;
-  color: rgb(255, 255, 255);
-  background: inherit;
-  background-image: radial-gradient(circle closest-side, rgb(255, 255, 255) 94%, #161616);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-@keyframes loader-anim {
-  100% {
-    background-position: left;
+@media only screen and (min-width: 36em) {
+  .card {
+    padding: 0.875em 1.875em;
   }
 }
 
@@ -11698,8 +11742,10 @@ button[type=submit] {
 }
 .projects__subtitle {
   font-family: "ObjectSans", sans-serif;
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
   line-height: 1.5;
+  margin-top: 1rem;
 }
 .projects__chevrons {
   display: flex;
@@ -11949,8 +11995,13 @@ button[type=submit] {
   }
 }
 
-.experties__checked-box {
-  width: 3.25rem !important;
+.experties__figure {
+  position: relative;
+}
+.experties__rating {
+  top: -50px;
+  right: 1%;
+  padding: 1em;
 }
 
 .sed__figure {
@@ -12015,6 +12066,19 @@ button[type=submit] {
     padding: 5.68em 5em;
   }
 }
+.meet-owner__figure {
+  position: relative;
+}
+.meet-owner__experience {
+  bottom: 70px;
+  right: 4%;
+}
+@media only screen and (min-width: 62em) {
+  .meet-owner__experience {
+    bottom: 100px;
+    right: -3%;
+  }
+}
 
 .clients {
   height: 638px;
@@ -12048,6 +12112,10 @@ button[type=submit] {
   padding: 0.31875em;
   border-radius: 2px;
   background-color: #d5b276;
+}
+
+.timeline__year {
+  font-size: clamp(2.5rem, 6vw + 1rem, 5rem);
 }
 
 .blogs-filter__group {
@@ -12129,6 +12197,11 @@ button[type=submit] {
   border-right: 0.35rem solid transparent;
   border-top: 0.35rem solid #161616;
 }
+@media only screen and (min-width: 62em) {
+  .custom-select-wrapper {
+    width: auto;
+  }
+}
 
 .custom-select {
   -moz-appearance: none;
@@ -12176,13 +12249,7 @@ button[type=submit] {
 }
 
 .why__checked-box {
-  width: 2.125rem;
-  height: 2.125rem;
-  background-color: #d5b276;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 2rem;
 }
 
 .what-get__lists {
@@ -12230,34 +12297,27 @@ button[type=submit] {
   position: relative;
 }
 .what-get__years-experience {
-  right: 100px;
-}
-.what-get__years-experience, .what-get__rating {
-  padding: 0.875em 1.875em;
-  border-radius: 9px;
-  box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.08);
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: -6.875rem;
+  right: 4.5%;
+  margin-top: -70px;
 }
 .what-get__rating {
-  margin-top: 180px;
-  margin-left: -100px;
+  top: -50px;
 }
-.what-get__red {
-  width: 30px;
-  height: 26px;
-  margin: 0 0 4px;
-  background-color: #f03c3c;
-  border-radius: 9px;
+@media screen and (max-width: 61.99em) {
+  .what-get__rating {
+    right: 4.5%;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .what-get__rating {
+    top: 0;
+    margin-left: -110px;
+    margin-top: 100px;
+  }
 }
 
 .years-title {
-  font-size: 3.375rem;
+  font-size: clamp(2rem, 4vw + 1rem, 3.375rem);
   color: #d5b276;
 }
 .years-title::after {
@@ -12458,6 +12518,10 @@ button[type=submit] {
   z-index: -1;
   margin-top: -31px;
   margin-left: 11px;
+}
+.commercial__title {
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
 }
 
 .contact-us__form .form__control {
@@ -13020,7 +13084,12 @@ button[type=submit] {
 }
 .footer__bottom {
   background: #d5b276;
-  padding-block: 1.25em;
+  padding-block: 1em;
+}
+.footer__bottom p {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .footer__link {
   font-size: 1rem;

@@ -14,7 +14,6 @@ window.addEventListener("load",() => {
   tl.from(".header__logo, .header__navItem, .header__btnWrapper", {
       opacity:0,
       duration:1,
-      stagger:0.23,
       ease: Power4.easeOut,
   });
   tl.from(".heading",{
@@ -23,7 +22,7 @@ window.addEventListener("load",() => {
       delay:-1,
       y:50,
       stagger:0.5,
-      ease: Power4.easeInOut,
+      ease: Power4.easeOut,
   });
   tl.from(".hero-btn", {
       opacity:0,
@@ -57,6 +56,41 @@ navLinks.forEach(link =>{
   }
 });
 //====== Active Page Link end ======
+
+// Counter script start
+const counterSection = document.querySelector(".sed__figure");
+const counters = document.querySelectorAll(".counter");
+if(counterSection != null && counters != null) {
+    let CounterObserver = new IntersectionObserver(
+        (entries, observer)=>{
+            let [entry] = entries;
+            if(!entry.isIntersecting) return;
+    
+            let speed = 200;
+            counters.forEach((counter, index) => {
+                const updateCounter = () =>{
+                    let targetNumber = +counter.dataset.target;
+                    let initialNumber = +counter.innerText;
+                    let incPerCount = targetNumber / speed;
+                    if(initialNumber  < targetNumber ){
+                        counter.innerText = Math.ceil(initialNumber + incPerCount);
+                        setTimeout(updateCounter, 20);
+                    }
+                }
+                updateCounter();
+            })
+            observer.unobserve(counterSection);
+        },{
+            root:null,
+            threshold:0.4,
+        }
+    );
+    CounterObserver.observe(counterSection);
+}
+// Counter script end
+
+
+
 
 //====== Mobile Menu Toggle start ======
 $(document).ready(function() {
@@ -178,7 +212,7 @@ const fadeIn = gsap.utils.toArray(".animate-fade-in");
 fadeIn.forEach((mainContent, i) => {
   const anim = gsap.fromTo(
     mainContent,
-    { opacity: 0},
+    { opacity: 0,duration: 1},
     {opacity: 1,duration: 1 }
   );
   ScrollTrigger.create({

@@ -5,34 +5,15 @@
 @use '../abstract/mixins' as *;
 
 
-
 .card{
-    padding: em(14) em(30);
+    padding: em(10) em(20);
     @include border-radius(9px);
     box-shadow: 0 3px 40px 0 rgba(0, 0, 0, 0.08);
     background-color: $clr-white;
     position: absolute;
     @include flex-center;
     flex-direction: column;
-    &__years-experience{
-        right: 100px;
+    @include breakpoint-sm{
+        padding: em(14) em(30);
     }
-    &__years-experience, 
-    &__rating{
-        margin-top: rem(-110);
-        
-    }
-    &__rating{
-        margin-top: 180px;
-        margin-left: -100px;
-    }
-    &__red{
-        width: 30px;
-        height: 26px;
-        margin: 0 0 4px;
-        background-color: #f03c3c;
-        @include border-radius(9px);
-    }
-
-
 }

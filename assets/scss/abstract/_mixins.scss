@@ -62,6 +62,15 @@
     transform: translateX($value);
 }
 
+@mixin transform($transforms) {
+    transform: $transforms;
+    -webkit-transform: $transforms; /* For older versions of Safari and Chrome */
+    -moz-transform: $transforms; /* For older versions of Firefox */
+    -ms-transform: $transforms; /* For older versions of Internet Explorer */
+    -o-transform: $transforms; /* For older versions of Opera */
+}
+
+
 // ======== setting font for header and body ======= //
 @mixin font-heading{
     // font-family: $ff-objsRegular;

@@ -102,6 +102,8 @@ address{
 small{
   font-size: rem(16);
   line-height: 1.75;
+  display: flex;
+  margin-top: rem(16);
 }
 
 p + p, h1 + p, h2 + p, h3 + p, h4 + p,  h5 + p, h6 + p{
