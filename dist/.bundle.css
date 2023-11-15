@@ -11521,6 +11521,61 @@ button[type=submit] {
   }
 }
 
+.main {
+  overflow: hidden;
+  position: relative;
+}
+
+.request_quote {
+  position: fixed;
+  top: 50%;
+  transform: translate(200px, -50%) rotate(-90deg);
+  right: 0;
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  pointer-events: none;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transition: all 1.5s ease;
+}
+.request_quote.show-quote-btn {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(85px, -50%) rotate(-90deg);
+}
+@media only screen and (min-width: 48em) {
+  .request_quote.show-quote-btn {
+    transform: translate(95px, -50%) rotate(-90deg);
+  }
+}
+@media only screen and (min-width: 62em) {
+  .request_quote.show-quote-btn {
+    transform: translate(105px, -50%) rotate(-90deg);
+  }
+}
+.request_quote a {
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1em 1.375em;
+}
+.request_quote span:nth-child(1) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.request_quote:hover svg path {
+  fill: #161616;
+}
+
 .footer__link {
   position: relative;
   display: inline-block;

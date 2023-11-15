@@ -4,7 +4,59 @@
 @use '../abstract/functions' as *;
 @use '../abstract/mixins' as *;
 
-// .header__mobile-link,
+.main{
+    overflow: hidden;
+    position: relative;
+}
+.request_quote{
+    position: fixed;
+    top: 50%;
+    transform: translate(200px, -50%) rotate(-90deg);
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+    pointer-events: none;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    @include transition(all, 1.5s, ease);
+    &.show-quote-btn{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(85px, -50%) rotate(-90deg);
+        @include breakpoint-md{
+            transform: translate(95px, -50%) rotate(-90deg);
+        }
+        @include breakpoint-lg{
+            transform: translate(105px, -50%) rotate(-90deg);
+        }
+    }
+    a{
+        @include border-radius(40px);
+        @include flex-center;
+        gap: rem(16);
+        padding: em(16) em(22);
+    }
+    span{
+        &:nth-child(1){
+            display:inline-flex;
+            align-items: center;
+            justify-content: center;
+            @include dimensions(rem(40), rem(40));
+            background: $clr-white;
+            @include border-radius(50%);
+        }
+    }
+    &:hover{
+        svg{
+            path{
+                fill:$clr-primary;
+            }
+        }
+    }
+}
 .footer__link{
     position: relative;
     display: inline-block;

@@ -36,7 +36,13 @@ window.addEventListener("load",() => {
 function toggleHeaderSticky(scrollY){
   if (scrollY > 20){
     header.classList.add("sticky");
-  } else{
+    let reqQuoteBtn = document.querySelector(".request_quote");
+    if(scrollY > 600){
+      reqQuoteBtn.classList.add("show-quote-btn");
+    }else{
+      reqQuoteBtn.classList.remove("show-quote-btn");
+    }
+  }else{
     header.classList.remove("sticky");
   }
 }
@@ -88,8 +94,6 @@ if(counterSection != null && counters != null) {
     CounterObserver.observe(counterSection);
 }
 // Counter script end
-
-
 
 
 //====== Mobile Menu Toggle start ======
