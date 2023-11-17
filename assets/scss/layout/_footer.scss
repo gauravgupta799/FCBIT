@@ -12,10 +12,6 @@
     &__bottom{
         background:$clr-secondary;
         padding-block: em(16);
-        p{
-            height: 100%;
-           @include flex-center-vertical;
-        }
     }
     &__link{
         font-size: rem(16);

@@ -53,7 +53,8 @@
         padding-inline: em(15);
         padding-block:em(80);
         background-color: $clr-primary;
-        @include breakpoint-md{
+        height: 100%;
+        @include breakpoint-sm{
             padding-inline: em(85);
             padding-block:em(78.4);
         }
@@ -78,6 +79,12 @@
     &__right{
        height: 100%;
        position: relative;
+    }
+    &__figure{
+        height: 100%;
+        img{
+            height: inherit;
+        }
     }
     &__years-experience{
         right: 4.5%;

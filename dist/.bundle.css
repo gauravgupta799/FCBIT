@@ -20,7 +20,7 @@
 }
 
 .swiper,
-swiper-container {
+.swiper-container {
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -837,11 +837,6 @@ td {
   padding: 0;
 }
 
-ol,
-ul, li {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
   color: #161616;
@@ -915,251 +910,256 @@ label {
 
 h1 {
   font-size: 2.25rem;
-  line-height: 3.375rem;
+  line-height: 2.75rem;
 }
 @media screen and (min-width: 36em) {
   h1 {
     font-size: 2.5rem;
-    line-height: 3.75rem;
+    line-height: 3rem;
   }
 }
 @media screen and (min-width: 48em) {
   h1 {
     font-size: 2.75rem;
-    line-height: 4.125rem;
+    line-height: 3.25rem;
   }
 }
 @media screen and (min-width: 62em) {
   h1 {
     font-size: 2.75rem;
-    line-height: 4.125rem;
+    line-height: 3.25rem;
   }
 }
 @media screen and (min-width: 85.375em) {
   h1 {
     font-size: 3rem;
-    line-height: 4.5rem;
+    line-height: 3.625rem;
   }
 }
 @media screen and (min-width: 100em) {
   h1 {
-    font-size: 3rem;
-    line-height: 4.5rem;
+    font-size: 3.375rem;
+    line-height: 4.0625rem;
   }
 }
 
 h2 {
   font-size: 2rem;
-  line-height: 3.125rem;
+  line-height: 2.375rem;
 }
 @media screen and (min-width: 36em) {
   h2 {
     font-size: 2.25rem;
-    line-height: 3.5rem;
+    line-height: 2.75rem;
   }
 }
 @media screen and (min-width: 48em) {
   h2 {
     font-size: 2.5rem;
-    line-height: 3.875rem;
+    line-height: 3rem;
   }
 }
 @media screen and (min-width: 62em) {
   h2 {
     font-size: 2.5rem;
-    line-height: 3.875rem;
+    line-height: 3rem;
   }
 }
 @media screen and (min-width: 85.375em) {
   h2 {
     font-size: 2.75rem;
-    line-height: 4.25rem;
+    line-height: 3.25rem;
   }
 }
 @media screen and (min-width: 100em) {
   h2 {
-    font-size: 2.75rem;
-    line-height: 4.25rem;
+    font-size: 3rem;
+    line-height: 3.625rem;
   }
 }
 
 h3 {
   font-size: 1.625rem;
-  line-height: 2.6rem;
+  line-height: 1.9375rem;
 }
 @media screen and (min-width: 36em) {
   h3 {
     font-size: 1.75rem;
-    line-height: 2.8rem;
+    line-height: 2.09375rem;
   }
 }
 @media screen and (min-width: 48em) {
   h3 {
     font-size: 1.875rem;
-    line-height: 3rem;
+    line-height: 2.25rem;
   }
 }
 @media screen and (min-width: 62em) {
   h3 {
     font-size: 1.875rem;
-    line-height: 3rem;
+    line-height: 2.25rem;
   }
 }
 @media screen and (min-width: 85.375em) {
   h3 {
     font-size: 2rem;
-    line-height: 3.1875rem;
+    line-height: 2.40625rem;
   }
 }
 @media screen and (min-width: 100em) {
   h3 {
-    font-size: 2rem;
-    line-height: 3.1875rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
 
 h4 {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1.375rem;
+  line-height: 1.6875rem;
 }
 @media screen and (min-width: 36em) {
   h4 {
     font-size: 1.5rem;
-    line-height: 2.5rem;
+    line-height: 1.8125rem;
   }
 }
 @media screen and (min-width: 48em) {
   h4 {
     font-size: 1.625rem;
-    line-height: 2.6875rem;
+    line-height: 2rem;
   }
 }
 @media screen and (min-width: 62em) {
   h4 {
     font-size: 1.625rem;
-    line-height: 2.6875rem;
+    line-height: 2rem;
   }
 }
 @media screen and (min-width: 85.375em) {
   h4 {
     font-size: 1.75rem;
-    line-height: 2.8875rem;
+    line-height: 2.125rem;
   }
 }
 @media screen and (min-width: 100em) {
   h4 {
-    font-size: 1.75rem;
-    line-height: 2.8875rem;
+    font-size: 2rem;
+    line-height: 2.40625rem;
   }
 }
 
 h5 {
   font-size: 1.25rem;
-  line-height: 2.1875rem;
+  line-height: 1.5rem;
 }
 @media screen and (min-width: 36em) {
   h5 {
     font-size: 1.25rem;
-    line-height: 2.1875rem;
+    line-height: 1.5rem;
   }
 }
 @media screen and (min-width: 48em) {
   h5 {
     font-size: 1.375rem;
-    line-height: 2.40625rem;
+    line-height: 1.65625rem;
   }
 }
 @media screen and (min-width: 62em) {
   h5 {
     font-size: 1.375rem;
-    line-height: 2.40625rem;
+    line-height: 1.65625rem;
   }
 }
 @media screen and (min-width: 85.375em) {
   h5 {
     font-size: 1.5rem;
-    line-height: 2.625rem;
+    line-height: 1.8125rem;
   }
 }
 @media screen and (min-width: 100em) {
   h5 {
-    font-size: 1.5rem;
-    line-height: 2.625rem;
+    font-size: 1.75rem;
+    line-height: 2.125rem;
   }
 }
 
 h6 {
   font-size: 1.125rem;
-  line-height: 2.025rem;
+  line-height: 1.5rem;
 }
 @media screen and (min-width: 36em) {
   h6 {
     font-size: 1.125rem;
-    line-height: 2.025rem;
+    line-height: 1.5rem;
   }
 }
 @media screen and (min-width: 48em) {
   h6 {
     font-size: 1.125rem;
-    line-height: 2.025rem;
+    line-height: 1.5rem;
   }
 }
 @media screen and (min-width: 62em) {
   h6 {
     font-size: 1.25rem;
-    line-height: 2.25rem;
+    line-height: 1.75rem;
   }
 }
 @media screen and (min-width: 85.375em) {
   h6 {
     font-size: 1.25rem;
-    line-height: 2.25rem;
+    line-height: 1.75rem;
   }
 }
 @media screen and (min-width: 100em) {
   h6 {
-    font-size: 1.25rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 p, ul, ol, body {
   font-size: 1rem;
-  line-height: 2rem;
+  line-height: 1.75rem;
   font-family: "Roboto", sans-serif;
 }
 @media screen and (min-width: 36em) {
   p, ul, ol, body {
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.8125rem;
   }
 }
 @media screen and (min-width: 48em) {
   p, ul, ol, body {
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.8125rem;
   }
 }
 @media screen and (min-width: 62em) {
   p, ul, ol, body {
     font-size: 1.125rem;
-    line-height: 2rem;
+    line-height: 2.03125rem;
   }
 }
 @media screen and (min-width: 85.375em) {
   p, ul, ol, body {
     font-size: 1.25rem;
-    line-height: 2.5rem;
+    line-height: 2.25rem;
   }
 }
 @media screen and (min-width: 100em) {
   p, ul, ol, body {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     line-height: 2.5rem;
   }
 }
 
 .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-fluid-full {
   width: 100%;
   height: auto;
 }
@@ -1168,6 +1168,10 @@ p, ul, ol, body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.list-none {
+  list-style: none;
 }
 
 .text-primary {
@@ -1219,14 +1223,27 @@ p, ul, ol, body {
   background: #161616;
 }
 
+.bg--secondary {
+  background: #d5b276;
+}
+
 .section-heading {
   margin: 0 auto;
   text-align: center;
-  font-weight: 300;
 }
 
 .fz-16 {
   font-size: 1rem;
+}
+@media only screen and (min-width: 85.375em) {
+  .fz-16 {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .fz-16 {
+    font-size: 1.25rem;
+  }
 }
 
 .divider {
@@ -11526,6 +11543,16 @@ button[type=submit] {
   position: relative;
 }
 
+.header__menu,
+.footer__list,
+.socials__list,
+.header__mobile-list,
+.header__submenu,
+.contact-us__socials--list,
+.header__submenu--mobile {
+  list-style: none;
+}
+
 .request_quote {
   position: fixed;
   top: 50%;
@@ -11561,16 +11588,33 @@ button[type=submit] {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1em 1.375em;
 }
 .request_quote span:nth-child(1) {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
   background: rgb(255, 255, 255);
   border-radius: 50%;
+}
+@media only screen and (min-width: 48em) {
+  .request_quote span:nth-child(1) {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .request_quote span:nth-child(1) {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+}
+@media only screen and (min-width: 85.375em) {
+  .request_quote span:nth-child(1) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .request_quote:hover svg path {
   fill: #161616;
@@ -11703,8 +11747,8 @@ button[type=submit] {
 }
 @media only screen and (min-width: 62em) {
   .hero__container {
-    background-image: url("../../../assets/images/home-hero-mask.webp");
-    background-position: right 100%;
+    background-image: url("../assets/images/home/home-banner.webp");
+    background-position: 100%;
     background-repeat: no-repeat;
   }
 }
@@ -11713,6 +11757,7 @@ button[type=submit] {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  padding-bottom: 0.25em;
 }
 
 .certification__ratings {
@@ -11728,54 +11773,71 @@ button[type=submit] {
 }
 
 .process {
-  background-image: url("../../../assets/images/renewables_construction.webp");
+  background-image: url("../../../assets/images/home/discuss-about-construction-project.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .process__card {
-  padding: 2.5em 0.375em;
+  padding: 2em 1em;
   background-color: rgb(255, 255, 255);
-  margin-top: 1.5rem;
+  margin-block: 1rem;
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (min-width: 48em) {
   .process__card {
-    padding: 2.5em 0.625em;
+    padding: 3.5em 1.75em;
   }
 }
 @media only screen and (min-width: 62em) {
   .process__card {
-    padding: 3.75em 1.25em;
+    padding: 4em 2em;
   }
 }
 @media only screen and (min-width: 85.375em) {
   .process__card {
-    padding: 5em 6.25em 5em 2.1875em;
+    padding: 4.5em 3.75em;
   }
 }
-.process__stepDesc {
-  line-height: 1.75;
-  margin-top: 0;
-}
-.process__checkedWrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 1rem;
-  row-gap: 6.5625rem;
-  position: relative;
-  z-index: 1;
-}
-.process__checkedWrapper::before {
+.process__card::before {
   content: "";
   position: absolute;
   z-index: -1;
   background-image: repeating-linear-gradient(180deg, transparent, transparent 3px, #d5b276 0, #d5b276 8px);
-  height: calc(100% - 80px);
+  height: 72%;
   width: 2px;
+  transform: translate(30px, 0px);
+}
+@media only screen and (min-width: 36em) {
+  .process__card::before {
+    transform: translate(40px, 0px);
+    height: 66%;
+  }
+}
+.process__content {
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+@media only screen and (min-width: 48em) {
+  .process__content {
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .process__content {
+    -moz-column-gap: 2.75rem;
+         column-gap: 2.75rem;
+  }
+}
+.process__stepDesc {
+  margin-top: 0.375rem;
 }
 .process__checked {
-  padding: 0.875em;
+  padding: 0.75em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11785,10 +11847,22 @@ button[type=submit] {
 .process__checked span {
   display: flex;
 }
+@media only screen and (min-width: 36em) {
+  .process__checked {
+    padding: 0.875em;
+  }
+}
 @media only screen and (min-width: 48em) {
   .process__checked {
-    padding: 1.25em;
+    padding: 1em;
   }
+}
+
+.meet-owner__figure {
+  height: 100%;
+}
+.meet-owner__figure img {
+  height: inherit;
 }
 
 .projects {
@@ -11969,7 +12043,7 @@ button[type=submit] {
 }
 .faq__details {
   border-bottom: 1px solid #a2a2a2;
-  padding: 1.125em 1em;
+  padding: 1.625em 1em;
 }
 .faq__details:first-child {
   border-top: 1px solid #a2a2a2;
@@ -12050,6 +12124,22 @@ button[type=submit] {
   }
 }
 
+.about__bgMobile {
+  display: block;
+}
+@media only screen and (min-width: 62em) {
+  .about__bgMobile {
+    display: none;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .about__container {
+    background-image: url("../../../assets/images/about/about-banner.webp");
+    background-position: right 100%;
+    background-repeat: no-repeat;
+  }
+}
+
 .experties__figure {
   position: relative;
 }
@@ -12067,6 +12157,9 @@ button[type=submit] {
   top: 0;
   right: 0;
   margin-top: -5rem;
+  width: 16.5625rem;
+  max-width: 100%;
+  text-align: center;
 }
 .sed__counter-container .divider {
   background: #fefefe;
@@ -12136,13 +12229,11 @@ button[type=submit] {
 }
 
 .clients {
-  height: 638px;
   background-color: #161616;
-  padding-block: 3.75em;
 }
 
 .build-together {
-  background-image: url("../../../assets/images/renewables_construction.webp");
+  background-image: url("../assets/images/about/civil-engineer-construction-worker-manager-holding.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -12325,8 +12416,9 @@ button[type=submit] {
   padding-inline: 0.9375em;
   padding-block: 5em;
   background-color: #161616;
+  height: 100%;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 36em) {
   .what-get__left {
     padding-inline: 5.3125em;
     padding-block: 4.9em;
@@ -12350,6 +12442,12 @@ button[type=submit] {
 .what-get__right {
   height: 100%;
   position: relative;
+}
+.what-get__figure {
+  height: 100%;
+}
+.what-get__figure img {
+  height: inherit;
 }
 .what-get__years-experience {
   right: 4.5%;
@@ -12907,13 +13005,7 @@ button[type=submit] {
 }
 .header__logo img {
   display: flex;
-  width: 5.9375rem;
-  height: 3.125rem;
-}
-@media only screen and (min-width: 36em) {
-  .header__logo img {
-    width: 6.875rem;
-  }
+  width: 6.25rem;
 }
 @media only screen and (min-width: 48em) {
   .header__logo img {
@@ -13023,7 +13115,7 @@ button[type=submit] {
 }
 @media only screen and (min-width: 62em) {
   .swiper-container-wrapper--timeline .swiper-pagination-progressbar {
-    margin-top: 3.375rem;
+    margin-top: 2.375rem;
     left: 0;
   }
 }
@@ -13140,11 +13232,6 @@ button[type=submit] {
 .footer__bottom {
   background: #d5b276;
   padding-block: 1em;
-}
-.footer__bottom p {
-  height: 100%;
-  display: flex;
-  align-items: center;
 }
 .footer__link {
   font-size: 1rem;

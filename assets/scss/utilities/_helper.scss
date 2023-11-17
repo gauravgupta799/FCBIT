@@ -5,13 +5,19 @@
 
 
 .img-fluid{
-    // max-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.img-fluid-full{
     width: 100%;
     height: auto;
 }
 .img-cover{
     width:100%;
     object-fit:cover;
+}
+.list-none{
+    list-style: none;
 }
 .text-primary{
     color:$clr-primary;
@@ -50,14 +56,22 @@
 .bg--primary{
     background: $clr-primary;
 }
+.bg--secondary{
+    background: $clr-secondary;
+}
 .section-heading{
-    margin: 0 auto;
+     margin: 0 auto;
     text-align: center;
-    font-weight: 300;
 }
 
 .fz-16{
     font-size: rem(16);
+    @include breakpoint-xl{
+        font-size: rem(18);
+    }
+    @include breakpoint-xxl{
+        font-size: rem(20);
+    }
 }
 
 .divider{

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54.072" height="54.072" viewBox="0 0 54.072 54.072">
+    <defs>
+        <clipPath id="cqnl8t7wja">
+            <path d="M0-682.665h54.072v54.072H0z" transform="translate(0 682.665)" style="fill:#fff"/>
+        </clipPath>
+    </defs>
+    <g style="clip-path:url(#cqnl8t7wja)">
+        <path d="M-534.93 27.142h-47.736V0h3.168v23.973h41.4V0h3.168z" transform="translate(585.833 22.178)" style="fill:#fff"/>
+    </g>
+    <path d="M142.178-307.326H120V-320h22.178zm-19.01-3.168h15.842v-6.337h-15.842z" transform="translate(-110.495 348.725)" style="fill:#fff"/>
+    <path d="M-92.95-220.99h-3.168v-15.842H-99.5v15.842h-3.168V-240h9.716z" transform="translate(137.517 268.725)" style="fill:#fff"/>
+    <path d="M-16.832 9.5H-20V0h3.168z" transform="translate(35.842 30.31)" style="fill:#fff"/>
+    <path d="M-16.832 9.5H-20V0h3.168z" transform="translate(42.178 30.31)" style="fill:#fff"/>
+    <g style="clip-path:url(#cqnl8t7wja)">
+        <path d="M-20-20h54.072V-.99H21.4v-5.354l-4.806-2.383-4.805 2.383V-.99h-9.5v-5.354l-4.811-2.383-4.805 2.383V-.99H-20zm50.9 3.168h-47.732v12.674h6.332v-4.151l7.974-3.954 7.978 3.954v4.151H8.62v-4.151l7.974-3.954 7.974 3.954v4.151H30.9z" transform="translate(20 24.752)" style="fill:#fff"/>
+    </g>
+    <path d="M-16.832 3.168H-20V0h3.168z" transform="translate(35.894 20.594)" style="fill:#fff"/>
+    <path d="M-16.832 3.168H-20V0h3.168z" transform="translate(55.01 20.594)" style="fill:#fff"/>
+</svg>

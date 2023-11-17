@@ -43,7 +43,8 @@
           left: 0;
         }
         @include breakpoint-lg{
-          margin-top:rem(54);
+          // margin-top:rem(54);
+          margin-top:rem(38);
           left: 0;
         }
         &-fill {

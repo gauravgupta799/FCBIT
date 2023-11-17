@@ -199,10 +199,7 @@ const swiper2 = new Swiper(".swiper-customers", {
     },
     breakpoints:{
         768:{
-            slidesPerView:1.2,
-        },
-        992:{
-            slidesPerView:1.8,
+            slidesPerView:2,
         },
     }
 });

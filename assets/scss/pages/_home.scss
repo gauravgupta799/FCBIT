@@ -16,26 +16,17 @@
     }
     &__container{
         @include breakpoint-lg{
-            background-image: url("../../../assets/images/home-hero-mask.webp");
-            background-position: right 100%;
+            background-image: url("../assets/images/home/home-banner.webp");
+            // background-position: right 100%;
+            background-position: 100%;
             background-repeat: no-repeat;
-            // @include transition(background-image, 0.3s, ease-out);
-            // animation:fadeIn 0.3s 1s ease-out;
-            // @include keyframes(fadeIn){
-            //     0%{
-            //         opacity: 0;
-            //     }
-            //     0%{
-            //         opacity: 1;
-            //     }
-            // }
         }
     }
     &__btnWrapper{
-        display: flex;
-        align-items: center;
+        @include flex-center-vertical;
         flex-wrap: wrap;
         gap:1rem;
+        padding-bottom: em(4);
     }
 }
 //?--------- Hero Styles End ---------
@@ -58,31 +49,21 @@
 
 //?--------- Process Styles Start ---------
 .process{
-    background-image: url("../../../assets/images/renewables_construction.webp");
+    background-image: url("../../../assets/images/home/discuss-about-construction-project.webp");
     @include background-cover;
     &__card{
-        padding: em(40) em(6);
+        padding: em(32) em(16);
         background-color: $clr-white;
-        margin-top: rem(24);
+        margin-block: rem(16);
         @include breakpoint-md{
-            padding: em(40) em(10);
+            padding: em(56) em(28);
         }
         @include breakpoint-lg{
-            padding: em(60) em(20);
+            padding: em(64)  em(32);
         }
         @include breakpoint-xl{
-            padding:em(80) em(100) em(80) em(35);
+            padding: em(72) em(60);
         }
-    }
-    &__stepDesc{
-        line-height: 1.75;
-        margin-top: 0;
-    }
-    &__checkedWrapper{
-        @include flex-center-vertical;
-        flex-direction: column;
-        padding-top:rem(16);
-        row-gap: rem(105);
         position: relative;
         z-index: 1;
         
@@ -91,24 +72,59 @@
             position: absolute;
             z-index: -1;
             background-image: repeating-linear-gradient(180deg,transparent,transparent 3px,$clr-secondary 0,$clr-secondary 8px);
-            height: calc(100% - 80px);
+            height: calc(100% - 28%);
             width: 2px;
+            transform: translate(30px, 0px);
+            @include breakpoint-sm{
+                transform: translate(40px, 0px);
+                height: calc(100% - 34%);
+            }
         }
     }
+    &__content{
+        display: flex;
+        align-items: flex-start;
+        column-gap: rem(16);
+        @include breakpoint-md{
+            column-gap: rem(28);
+        }
+        @include breakpoint-md{
+            column-gap: rem(44);
+        } 
+    }
+    &__stepDesc{
+        margin-top: rem(6);
+    }
     &__checked{
-        padding:em(14);
+        padding:em(12);
         @include flex-center;
         @include border-radius(4px);
         background-color: $clr-secondary;
         span{
             display: flex;
         }
-        @include breakpoint-md{
-            padding:em(20);
+        @include breakpoint-sm{
+            padding:em(14);
         }
+        @include breakpoint-md{
+            padding:em(16);
+        }
+       
     }
 }
 //?--------- Process Styles End ---------
+
+
+//?--------- Meet-owner Styles Start ---------
+.meet-owner{
+    &__figure{
+        height: 100%;
+        img{
+            height: inherit;
+        }
+    }
+}
+//?--------- Meet-owner Styles End ---------
 
 
 //?--------- Projects Styles Start ---------
@@ -278,7 +294,8 @@
     }
     &__details{
         border-bottom: 1px solid  $clr-grey-light-2;
-        padding: em(18) em(16);
+        // padding: em(18) em(16);
+        padding: em(26) em(16);
         &:first-child{
             border-top:1px solid $clr-grey-light-2;
         }

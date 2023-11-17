@@ -8,6 +8,17 @@
     overflow: hidden;
     position: relative;
 }
+
+.header__menu,
+.footer__list,
+.socials__list,
+.header__mobile-list,
+.header__submenu,
+.contact-us__socials--list,
+.header__submenu--mobile{
+    list-style: none;
+}
+
 .request_quote{
     position: fixed;
     top: 50%;
@@ -37,16 +48,22 @@
         @include border-radius(40px);
         @include flex-center;
         gap: rem(16);
-        padding: em(16) em(22);
     }
     span{
         &:nth-child(1){
-            display:inline-flex;
-            align-items: center;
-            justify-content: center;
-            @include dimensions(rem(40), rem(40));
+            @include flex-center;
+            @include dimensions(rem(25), rem(25));
             background: $clr-white;
             @include border-radius(50%);
+            @include breakpoint-md{
+                @include dimensions(rem(30), rem(30));
+            }
+            @include breakpoint-lg{
+                @include dimensions(rem(35), rem(35));
+            }
+            @include breakpoint-xl{
+                @include dimensions(rem(40), rem(40));
+            }
         }
     }
     &:hover{
@@ -57,6 +74,7 @@
         }
     }
 }
+
 .footer__link{
     position: relative;
     display: inline-block;
