@@ -70,10 +70,12 @@
 
 .custom-select-wrapper {
     width: 100%;
-    min-width: 280px;
+    min-width: rem(280);
     position: relative;
+    border-bottom: 1px solid $clr-border;
     &::after{
         @include caret-down;
+        right: rem(0);
     }
     @include breakpoint-lg{
         width: auto;

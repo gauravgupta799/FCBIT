@@ -17,9 +17,15 @@
     &__container{
         @include breakpoint-lg{
             background-image: url("../assets/images/home/home-banner.webp");
-            // background-position: right 100%;
             background-position: 100%;
             background-repeat: no-repeat;
+        }
+        &--service{
+            @include breakpoint-lg{
+                background-image: url("../../../assets/images/services/service-banner.webp");
+                background-position: 100%;
+                background-repeat: no-repeat;
+            }
         }
     }
     &__btnWrapper{
@@ -49,8 +55,11 @@
 
 //?--------- Process Styles Start ---------
 .process{
-    background-image: url("../../../assets/images/home/discuss-about-construction-project.webp");
+    background-image: url("../assets/images/home/discuss-about-construction-project.webp");
     @include background-cover;
+    &--services{
+        background-image: url("../assets/images/services/portrait-construction-worker.webp");      
+    } 
     &__card{
         padding: em(32) em(16);
         background-color: $clr-white;

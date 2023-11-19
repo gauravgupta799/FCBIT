@@ -11752,6 +11752,13 @@ button[type=submit] {
     background-repeat: no-repeat;
   }
 }
+@media only screen and (min-width: 62em) {
+  .hero__container--service {
+    background-image: url("../../../assets/images/services/service-banner.webp");
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
+}
 .hero__btnWrapper {
   display: flex;
   align-items: center;
@@ -11773,10 +11780,13 @@ button[type=submit] {
 }
 
 .process {
-  background-image: url("../../../assets/images/home/discuss-about-construction-project.webp");
+  background-image: url("../assets/images/home/discuss-about-construction-project.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.process--services {
+  background-image: url("../assets/images/services/portrait-construction-worker.webp");
 }
 .process__card {
   padding: 2em 1em;
@@ -12330,8 +12340,9 @@ button[type=submit] {
 
 .custom-select-wrapper {
   width: 100%;
-  min-width: 280px;
+  min-width: 17.5rem;
   position: relative;
+  border-bottom: 1px solid #636363;
 }
 .custom-select-wrapper::after {
   content: "";
@@ -12342,6 +12353,7 @@ button[type=submit] {
   border-left: 0.35rem solid transparent;
   border-right: 0.35rem solid transparent;
   border-top: 0.35rem solid #161616;
+  right: 0rem;
 }
 @media only screen and (min-width: 62em) {
   .custom-select-wrapper {
