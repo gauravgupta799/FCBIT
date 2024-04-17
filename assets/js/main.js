@@ -1,6 +1,7 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
 const body = document.querySelector("#body");
 const header = document.querySelector('.header');
+const html = document.querySelector("html")
 
 //======  Loader start ======
 window.onload = () => {
@@ -63,10 +64,29 @@ navLinks.forEach(link =>{
 });
 //====== Active Page Link end ======
 
+
+// ============= Popup Modal start ==========
+const poupBtns = document.querySelectorAll(".inpect-my-property-btn");
+const popUp = document.querySelector(".popup");
+poupBtns.forEach((poupBtn) =>{
+  poupBtn.addEventListener("click", () => {
+    popUp.style.display = "flex";
+    html.classList.add("overflow-hidden");
+  });
+
+  const closePopupBtn = document.querySelector("#pop-up-close-btn");
+  closePopupBtn.addEventListener("click", () => {
+    popUp.style.display = "none";
+    html.classList.remove("overflow-hidden");
+  })
+});
+// ============= Popup Modal start ==========
+
+
 // Counter script start
 const counterSection = document.querySelector(".sed__figure");
 const counters = document.querySelectorAll(".counter");
-if(counterSection != null && counters != null) {
+if(counterSection && counters) {
     let CounterObserver = new IntersectionObserver(
         (entries, observer)=>{
             let [entry] = entries;

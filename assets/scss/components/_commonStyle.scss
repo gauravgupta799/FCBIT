@@ -45,7 +45,6 @@
         }
     }
     a{
-        @include border-radius(40px);
         @include flex-center;
         gap: rem(16);
     }

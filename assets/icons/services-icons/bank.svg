@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98.208" height="98.208" viewBox="0 0 98.208 98.208">
+  <g id="bank" transform="translate(0)">
+    <path id="Path_3585" data-name="Path 3585" d="M.515,462.273a2.878,2.878,0,0,0,2.363,1.236H95.33a2.878,2.878,0,0,0,2.695-3.886,23.833,23.833,0,0,0-4.069-6.617A2.872,2.872,0,0,0,91.773,452H6.435a2.873,2.873,0,0,0-2.183,1.006,23.837,23.837,0,0,0-4.069,6.617,2.872,2.872,0,0,0,.332,2.65Z" transform="translate(0.001 -365.302)" fill="#d5b276"/>
+    <path id="Path_3586" data-name="Path 3586" d="M60,241H77.455v34.718H60Z" transform="translate(-48.491 -194.773)" fill="#d5b276"/>
+    <path id="Path_3587" data-name="Path 3587" d="M211,241h17.263v34.718H211Z" transform="translate(-170.527 -194.773)" fill="#d5b276"/>
+    <path id="Path_3588" data-name="Path 3588" d="M361,241h17.455v34.718H361Z" transform="translate(-291.756 -194.773)" fill="#d5b276"/>
+    <path id="Path_3589" data-name="Path 3589" d="M6.228,161.662a2.908,2.908,0,0,0,2.035.847h0s0,0,0,0H89.942s0,0,0,0h0a2.907,2.907,0,0,0,2.035-.847c.585-.585,4.961-5.142,6.227-10.661H0C1.267,156.521,5.642,161.077,6.228,161.662Z" transform="translate(0 -122.037)" fill="#d5b276"/>
+    <path id="Path_3590" data-name="Path 3590" d="M104.092,23.209,58.106.3a2.881,2.881,0,0,0-2.574,0L9.547,23.209Z" transform="translate(-7.715 0)" fill="#d5b276"/>
+  </g>
+</svg>

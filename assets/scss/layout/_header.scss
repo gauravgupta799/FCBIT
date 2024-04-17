@@ -36,7 +36,7 @@
         justify-content: space-between;
     }
     &__navbar{
-        width: 100%;
+        // width: 100%;
         display: none;
         opacity: 0;
         visibility: hidden;
@@ -218,17 +218,17 @@
     &__logo{
         img{
             display: flex;
-            width: rem(100);
+            width: rem(120);
             @include breakpoint-md{
-                width: rem(110);
-            }
-            @include breakpoint-lg{
                 width: auto;
             }
         }
     }
     &__btnWrapper{
-        display: flex;
+        display: none;
+        @include breakpoint-lg{
+            display: flex;
+        }
     }
 }
 

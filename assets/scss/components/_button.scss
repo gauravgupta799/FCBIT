@@ -91,10 +91,11 @@
 }
 
 .btn--primary{
-    background-color:$clr-secondary;
-    border:1px solid transparent;
+    // background-color:$clr-secondary;
+    background: linear-gradient(to bottom, #A1743A, #FDF5A6);
+    outline:1px solid transparent;
     &:hover{
-        border-color: $clr-white;
+        outline-color: $clr-white;
     }
 }
 
@@ -156,7 +157,6 @@
         color:$clr-white;
     }
 }
-
 
 
 .search-btn{

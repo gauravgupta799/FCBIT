@@ -1,0 +1,45 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/fonts" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.popup{
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 999;
+    background:rgba(0,0,0,0.8);
+    @include full-dimensions;
+    @include flex-center-vertical;
+    display: none;
+
+    &__wrapper{
+        position: relative;
+        width: min(94%, 600px);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-inline:auto;
+        padding:em(16);
+        background: $clr-white;
+        @include border-radius(4px);
+        @include breakpoint-md{
+            padding:em(32);
+        }
+    }
+
+    &__close-btn{
+        position: absolute;
+        top: 6px; right: 6px;
+        @include dimensions(rem(25), rem(25));
+        @include border-radius(50%);
+        background: transparent;
+        font-size: rem(18);
+        @include breakpoint-md{
+            font-size: rem(24);
+        }
+        &:hover{
+            cursor: pointer;
+            color:$clr-secondary;
+        }
+    }
+}

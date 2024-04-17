@@ -7,12 +7,18 @@
 
 .form{
     &__group{
+        // display: flex;
+        // align-items: center;
         margin-bottom: rem(16);
         position: relative;
         &--footer{
             display: flex;
             background: $clr-white;
             @include border-radius(9px);
+        }
+        &--contact{
+            display: flex;
+            align-items: center;
         }
     }
     &__icon{

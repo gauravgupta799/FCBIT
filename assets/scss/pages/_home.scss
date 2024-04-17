@@ -32,7 +32,8 @@
         @include flex-center-vertical;
         flex-wrap: wrap;
         gap:1rem;
-        padding-bottom: em(4);
+        // padding-bottom: em(4);
+        padding:1px;
     }
 }
 //?--------- Hero Styles End ---------
@@ -64,6 +65,8 @@
         padding: em(32) em(16);
         background-color: $clr-white;
         margin-block: rem(16);
+        position: relative;
+        z-index: 1;
         @include breakpoint-md{
             padding: em(56) em(28);
         }
@@ -73,9 +76,6 @@
         @include breakpoint-xl{
             padding: em(72) em(60);
         }
-        position: relative;
-        z-index: 1;
-        
         &::before{
             content: "";
             position: absolute;
@@ -300,10 +300,12 @@
                 border-top-color: $clr-secondary;
             }
         }
+        h4{
+            max-width: 840px;
+        }
     }
     &__details{
         border-bottom: 1px solid  $clr-grey-light-2;
-        // padding: em(18) em(16);
         padding: em(26) em(16);
         &:first-child{
             border-top:1px solid $clr-grey-light-2;
@@ -379,3 +381,37 @@
     }
 }
 //?--------- Cta Styles End ---------
+
+
+.services-grid{
+    &__item{
+        padding: 4em 2em 4em 2em;
+        &:nth-child(-n + 4) {
+            border-bottom: 1px solid #ccc;
+            position: relative;
+           &::before {
+                content: '';
+                position: absolute;
+                top: 65%; 
+                left: 0;
+                width: 1px;
+                height: 75%;
+                background-color: #ccc;
+            }
+            &:first-child{
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                }
+            }
+        }
+        &:nth-last-child(-n+4){
+            border-bottom: 1px solid #ccc;
+            @include breakpoint-sm{
+                border:none;
+            }
+        }
+    }
+}
